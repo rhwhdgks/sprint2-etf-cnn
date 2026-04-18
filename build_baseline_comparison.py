@@ -34,28 +34,60 @@ KEY_COLS = [
 ]
 
 
+ENSEMBLE_CONFIGS = {
+    "ensemble_top3": {
+        "members": [
+            ("cnn_1d_dilated_image_scale", "outputs_walkforward_1dcnn_extra"),
+            ("cnn_1d_cumulative_scale", "outputs_walkforward_1dcnn_extra"),
+            ("cnn_1d_attention_image_scale", "outputs_walkforward_1dcnn_extra"),
+        ],
+        "aggregation": "raw_mean",
+    },
+    "ensemble_best": {
+        "members": [
+            ("logistic_image_scale", "outputs_walkforward_4model"),
+            ("cnn_1d_attention_image_scale", "outputs_walkforward_1dcnn_extra"),
+            ("cnn_1d_cumulative_scale", "outputs_walkforward_1dcnn_extra"),
+        ],
+        "aggregation": "rank_mean",
+    },
+}
+
+
 def compute_ensemble_portfolio_metrics(
-    top_models: list[str] | None = None,
+    name: str = "ensemble_top3",
     horizon: int = 20,
     top_k: int = 2,
 ) -> dict:
-    """Recompute top-k Sharpe / cumulative return for the ensemble_top3 signal."""
+    """Recompute rank corr / top-k Sharpe for a named ensemble."""
     import math
     import numpy as np
 
-    if top_models is None:
-        top_models = [
-            "cnn_1d_dilated_image_scale",
-            "cnn_1d_cumulative_scale",
-            "cnn_1d_attention_image_scale",
-        ]
-    preds = pd.read_csv(ROOT / "outputs_walkforward_1dcnn_extra" / "walkforward_predictions.csv")
-    sub = preds[preds["model_name"].isin(top_models)]
+    cfg = ENSEMBLE_CONFIGS[name]
+    frames = []
+    for model, src in cfg["members"]:
+        df = pd.read_csv(ROOT / src / "walkforward_predictions.csv")
+        df = df[df["model_name"] == model][["date", "asset", "signal_value", "future_return"]].copy()
+        df["model_name"] = model
+        frames.append(df)
+    members = pd.concat(frames, ignore_index=True)
+    members["date"] = pd.to_datetime(members["date"])
+
+    if cfg["aggregation"] == "rank_mean":
+        members["signal_value"] = members.groupby(["date", "model_name"])["signal_value"].rank(pct=True)
+
     ens = (
-        sub.groupby(["date", "asset"], as_index=False)
+        members.groupby(["date", "asset"], as_index=False)
         .agg(signal_value=("signal_value", "mean"), future_return=("future_return", "first"))
     )
-    ens["date"] = pd.to_datetime(ens["date"])
+
+    per_date = (
+        ens.groupby("date")
+        .apply(lambda g: g["signal_value"].rank().corr(g["future_return"].rank()))
+        .dropna()
+    )
+    rank_corr = float(per_date.mean())
+
     rebal_dates = sorted(ens["date"].drop_duplicates().tolist())[::horizon]
     rets = []
     for d in rebal_dates:
@@ -66,6 +98,7 @@ def compute_ensemble_portfolio_metrics(
     r = np.array(rets, dtype=float)
     sharpe = float(r.mean() / r.std(ddof=1) * math.sqrt(252.0 / horizon))
     return {
+        "rank_corr": rank_corr,
         "top_k_sharpe": sharpe,
         "top_k_cumulative_return": float(np.prod(1 + r) - 1),
         "top_k_hit_rate": float(np.mean(r > 0)),
@@ -82,28 +115,31 @@ def load_unified() -> pd.DataFrame:
         frames.append(df)
     merged = pd.concat(frames).drop_duplicates(subset="model_name").reset_index(drop=True)
 
-    # bring in ensemble from ode_inputs_cnn/comparison.csv + recompute portfolio metrics
+    # bring in ensembles: ensemble_top3 (legacy CNN-only) and ensemble_best (recommended)
     ens = pd.read_csv(OUT / "comparison.csv")
-    ens_row = ens[ens["model_name"] == "ensemble_top3"].iloc[0]
-    ens_portfolio = compute_ensemble_portfolio_metrics()
-    ens_new = {
-        "model_name": "ensemble_top3",
-        "future_return_rank_correlation": float(ens_row["oos_rank_corr_mean"]),
-        "top_k_sharpe": ens_portfolio["top_k_sharpe"],
-        "top_k_cumulative_return": ens_portfolio["top_k_cumulative_return"],
-        "top_k_hit_rate": ens_portfolio["top_k_hit_rate"],
-        "turnover": None,
-        "n_folds": int(ens_row["n_folds"]),
-    }
-    merged = pd.concat([merged, pd.DataFrame([ens_new])], ignore_index=True)
+    for ens_name in ENSEMBLE_CONFIGS:
+        match = ens[ens["model_name"] == ens_name]
+        n_folds = int(match.iloc[0]["n_folds"]) if not match.empty else 24
+        metrics = compute_ensemble_portfolio_metrics(name=ens_name)
+        merged = pd.concat([merged, pd.DataFrame([{
+            "model_name": ens_name,
+            "future_return_rank_correlation": metrics["rank_corr"],
+            "top_k_sharpe": metrics["top_k_sharpe"],
+            "top_k_cumulative_return": metrics["top_k_cumulative_return"],
+            "top_k_hit_rate": metrics["top_k_hit_rate"],
+            "turnover": None,
+            "n_folds": n_folds,
+        }])], ignore_index=True)
 
     merged["family"] = merged["model_name"].apply(classify_family)
     return merged.sort_values("future_return_rank_correlation", ascending=False).reset_index(drop=True)
 
 
 def classify_family(name: str) -> str:
+    if name == "ensemble_best":
+        return "Ensemble (CNN + logistic) ★"
     if name.startswith("ensemble_"):
-        return "Ensemble (CNN)"
+        return "Ensemble (CNN only)"
     if name.startswith("logistic_") and "image" in name:
         return "Baseline (image+logistic)"
     if name.startswith("logistic_"):
@@ -116,7 +152,8 @@ def classify_family(name: str) -> str:
 
 
 FAMILY_COLORS = {
-    "Ensemble (CNN)": "#c0392b",
+    "Ensemble (CNN + logistic) ★": "#8e1b1b",
+    "Ensemble (CNN only)": "#c0392b",
     "CNN 1D image": "#2980b9",
     "CNN 2D image": "#8e44ad",
     "CNN (no image)": "#16a085",

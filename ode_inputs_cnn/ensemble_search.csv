@@ -1,0 +1,511 @@
+mode,k,members,rank_corr,top_k_sharpe,top_k_cum,top_k_hit
+raw,1,logistic_image_scale,0.03924851190476191,0.38500929176343807,0.6569180682499105,0.5902777777777778
+raw,1,logistic_cumulative_scale,-0.007217261904761907,0.07643795194437607,-0.05122835965927475,0.5555555555555556
+raw,1,cnn_1d_image_scale,-0.001004464285714283,0.07272599856082221,-0.04692768954985116,0.5486111111111112
+raw,1,cnn_2d_rendered_images,0.002194940476190475,0.20192275551052374,0.22900550409906772,0.5694444444444444
+raw,1,cnn_1d_attention_image_scale,0.023127480158730167,0.2681053526198874,0.39175317958670086,0.5902777777777778
+raw,1,cnn_1d_cumulative_scale,0.027095734126984128,0.5214478524828869,0.9977374615768371,0.5902777777777778
+raw,1,cnn_1d_dilated_image_scale,0.027963789682539684,0.35437782903443815,0.6661490312217502,0.5694444444444444
+raw,1,cnn_1d_multiscale_image_scale,0.008692956349206344,0.24587455819518209,0.34244988462400405,0.5833333333333334
+raw,1,cnn_2d_residual_images,0.007226267715429987,0.09561768049766343,0.01536367262259164,0.5486111111111112
+raw,2,logistic_image_scale + logistic_cumulative_scale,0.02165178571428572,0.1558608064495073,0.13123069735860815,0.5625
+raw,2,logistic_image_scale + cnn_1d_image_scale,0.030890376984126996,0.1676975040028514,0.16057004484385184,0.5625
+raw,2,logistic_image_scale + cnn_2d_rendered_images,0.04011656746031747,0.3596680050817608,0.6860794559335246,0.5694444444444444
+raw,2,logistic_image_scale + cnn_1d_attention_image_scale,0.03294890873015874,0.31107990129113444,0.5103194625864589,0.6111111111111112
+raw,2,logistic_image_scale + cnn_1d_cumulative_scale,0.04335317460317462,0.49386063645412837,0.9575911724322708,0.5902777777777778
+raw,2,logistic_image_scale + cnn_1d_dilated_image_scale,0.045585317460317465,0.3877068685897476,0.8002292613380289,0.5902777777777778
+raw,2,logistic_image_scale + cnn_1d_multiscale_image_scale,0.033593750000000006,0.4246278908651294,0.7927582721562472,0.5833333333333334
+raw,2,logistic_image_scale + cnn_2d_residual_images,0.03686755952380953,0.21494768806292916,0.2675614541482809,0.5694444444444444
+raw,2,logistic_cumulative_scale + cnn_1d_image_scale,-0.009027777777777782,-0.0010105219257996048,-0.19032272665383743,0.5486111111111112
+raw,2,logistic_cumulative_scale + cnn_2d_rendered_images,-0.016617063492063492,0.05213613303902888,-0.09472151314526611,0.5555555555555556
+raw,2,logistic_cumulative_scale + cnn_1d_attention_image_scale,-0.0025545634920634986,0.20767140713837245,0.25788722857891466,0.5555555555555556
+raw,2,logistic_cumulative_scale + cnn_1d_cumulative_scale,-0.0018229166666666617,0.06263443715808363,-0.07354936679309743,0.5277777777777778
+raw,2,logistic_cumulative_scale + cnn_1d_dilated_image_scale,-0.014198908730158733,0.13871236968041237,0.09322480978069159,0.5625
+raw,2,logistic_cumulative_scale + cnn_1d_multiscale_image_scale,-0.017770337301587297,0.04668701363495147,-0.09955510276246271,0.5416666666666666
+raw,2,logistic_cumulative_scale + cnn_2d_residual_images,-0.009957837301587304,0.024918068215200546,-0.15191285637862106,0.5486111111111112
+raw,2,cnn_1d_image_scale + cnn_2d_rendered_images,0.028844246031746037,0.25228629608681225,0.348848489252817,0.5972222222222222
+raw,2,cnn_1d_image_scale + cnn_1d_attention_image_scale,0.017274305555555564,0.26808288944764114,0.39079149414574776,0.5625
+raw,2,cnn_1d_image_scale + cnn_1d_cumulative_scale,0.021155753968253973,0.12207993236141165,0.043985423366248444,0.5555555555555556
+raw,2,cnn_1d_image_scale + cnn_1d_dilated_image_scale,0.0216765873015873,0.2722202571576053,0.4118047311482673,0.5555555555555556
+raw,2,cnn_1d_image_scale + cnn_1d_multiscale_image_scale,0.01619543650793651,0.23065222452118683,0.30049564954656915,0.5625
+raw,2,cnn_1d_image_scale + cnn_2d_residual_images,0.024590773809523812,0.17416270450915564,0.175812694779107,0.5416666666666666
+raw,2,cnn_2d_rendered_images + cnn_1d_attention_image_scale,0.01975446428571429,0.36348314785679325,0.6668925389444877,0.5902777777777778
+raw,2,cnn_2d_rendered_images + cnn_1d_cumulative_scale,0.022867063492063494,0.23434374009125578,0.3074066649756071,0.5833333333333334
+raw,2,cnn_2d_rendered_images + cnn_1d_dilated_image_scale,0.01872519841269842,0.26572277292865765,0.3922029674608378,0.5416666666666666
+raw,2,cnn_2d_rendered_images + cnn_1d_multiscale_image_scale,0.026971726190476185,0.2556834937777385,0.36017162338092024,0.5833333333333334
+raw,2,cnn_2d_rendered_images + cnn_2d_residual_images,0.017075892857142862,0.17365120049329497,0.16400513397227257,0.5694444444444444
+raw,2,cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.02764136904761906,0.23660807784834842,0.312897420938097,0.5694444444444444
+raw,2,cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.02748015873015873,0.41267084500079637,0.8505679683013065,0.6111111111111112
+raw,2,cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.021825396825396828,0.35169709864895815,0.6404303757638867,0.5972222222222222
+raw,2,cnn_1d_attention_image_scale + cnn_2d_residual_images,0.031200396825396833,0.17790130724841557,0.17268455870410881,0.5555555555555556
+raw,2,cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.035875496031746036,0.3849671443298692,0.7722675357344597,0.5902777777777778
+raw,2,cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.021974206349206358,0.14495394183735094,0.09510103106688383,0.5833333333333334
+raw,2,cnn_1d_cumulative_scale + cnn_2d_residual_images,0.02460317460317461,0.2385850219930635,0.32838420062059104,0.5347222222222222
+raw,2,cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.021701388888888895,0.2441961862668584,0.3430148483875377,0.5486111111111112
+raw,2,cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.03426339285714286,0.19175592094340374,0.20788682248294377,0.5555555555555556
+raw,2,cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.02538442460317461,0.19224638873294908,0.20247974693018866,0.5555555555555556
+raw,3,logistic_image_scale + logistic_cumulative_scale + cnn_1d_image_scale,0.016406250000000004,0.19506971927255012,0.22885069831716698,0.5763888888888888
+raw,3,logistic_image_scale + logistic_cumulative_scale + cnn_2d_rendered_images,0.016195436507936513,0.2065935277325893,0.2583811361089372,0.5486111111111112
+raw,3,logistic_image_scale + logistic_cumulative_scale + cnn_1d_attention_image_scale,0.02059771825396826,0.23471934660962301,0.3326454145622819,0.5694444444444444
+raw,3,logistic_image_scale + logistic_cumulative_scale + cnn_1d_cumulative_scale,0.02357390873015873,0.2064287019148912,0.25821327218564094,0.5486111111111112
+raw,3,logistic_image_scale + logistic_cumulative_scale + cnn_1d_dilated_image_scale,0.01615823412698413,0.2654781622363789,0.4199163414531524,0.5486111111111112
+raw,3,logistic_image_scale + logistic_cumulative_scale + cnn_1d_multiscale_image_scale,0.015674603174603174,0.21174724558443456,0.27149473443836936,0.5694444444444444
+raw,3,logistic_image_scale + logistic_cumulative_scale + cnn_2d_residual_images,0.022048611111111123,0.10851007961200533,0.021122324638759737,0.5694444444444444
+raw,3,logistic_image_scale + cnn_1d_image_scale + cnn_2d_rendered_images,0.031212797619047633,0.22132104074215123,0.28010827175825437,0.5486111111111112
+raw,3,logistic_image_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale,0.028546626984126976,0.31382652935910155,0.5174176171303095,0.5763888888888888
+raw,3,logistic_image_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale,0.03807043650793652,0.20294016421517286,0.2406710245191599,0.5555555555555556
+raw,3,logistic_image_scale + cnn_1d_image_scale + cnn_1d_dilated_image_scale,0.0439856150793651,0.3105737117848387,0.5303901163990756,0.5763888888888888
+raw,3,logistic_image_scale + cnn_1d_image_scale + cnn_1d_multiscale_image_scale,0.034213789682539686,0.3516131581043226,0.6260196624130159,0.5625
+raw,3,logistic_image_scale + cnn_1d_image_scale + cnn_2d_residual_images,0.03214285714285715,0.047358580959016565,-0.06691172972284631,0.5416666666666666
+raw,3,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale,0.03276289682539683,0.3590570975193444,0.6739829288892947,0.5833333333333334
+raw,3,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale,0.04160466269841271,0.3830336814534851,0.7399260641555796,0.5555555555555556
+raw,3,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale,0.03366815476190477,0.3028156399288822,0.5057773060111768,0.5486111111111112
+raw,3,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale,0.02831101190476191,0.28910214196363226,0.46463555980943805,0.5625
+raw,3,logistic_image_scale + cnn_2d_rendered_images + cnn_2d_residual_images,0.029650297619047618,0.30466210689367185,0.49611950842739594,0.5833333333333334
+raw,3,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.03298611111111112,0.24860418499636644,0.3484712790338582,0.5833333333333334
+raw,3,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.0380952380952381,0.3604252970614067,0.6968488830015354,0.5763888888888888
+raw,3,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.029625496031746038,0.3685270702023292,0.6818335184694675,0.5902777777777778
+raw,3,logistic_image_scale + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.03773561507936509,0.326134959212752,0.5414243384420867,0.5625
+raw,3,logistic_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.047842261904761915,0.32906491173939356,0.5923803080785084,0.5972222222222222
+raw,3,logistic_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.0326388888888889,0.3698028311506295,0.6539295300578516,0.5763888888888888
+raw,3,logistic_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.041480654761904774,0.2542868771997534,0.3676112082101015,0.5625
+raw,3,logistic_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.046961805555555555,0.33254991358694774,0.5958564888061384,0.5694444444444444
+raw,3,logistic_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.04685019841269843,0.3646711997144989,0.7041759787468489,0.5763888888888888
+raw,3,logistic_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.03572668650793652,0.28315752759846047,0.4530146653829541,0.5625
+raw,3,logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_rendered_images,-0.016046626984126986,0.06778688647597352,-0.053338594524296234,0.5555555555555556
+raw,3,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale,0.0011160714285714266,0.18288845142663715,0.1975385821549196,0.5763888888888888
+raw,3,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale,-0.0010292658730158709,0.053332611074772086,-0.0862784472757997,0.5486111111111112
+raw,3,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_dilated_image_scale,-0.00029761904761904407,0.1584268611281791,0.13942649713859434,0.5416666666666666
+raw,3,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_multiscale_image_scale,-0.009747023809523813,0.01962308792194395,-0.1436825119656553,0.5625
+raw,3,logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_residual_images,-0.007068452380952387,-0.003182718800050272,-0.19161458080301064,0.5486111111111112
+raw,3,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale,-0.0043650793650793695,0.1285786089954784,0.07363058826534985,0.5625
+raw,3,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale,-0.010181051587301586,0.07618299464876169,-0.04211569429026829,0.5347222222222222
+raw,3,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale,-0.017509920634920642,0.11924091675080073,0.053294791335662506,0.5347222222222222
+raw,3,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale,-0.02485119047619048,0.11378031536699769,0.03741480741730152,0.5486111111111112
+raw,3,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_2d_residual_images,-0.008593749999999997,0.01735866428928962,-0.15840687094607797,0.5416666666666666
+raw,3,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,-0.0008308531746031782,0.17899691250445837,0.18831376709274017,0.5555555555555556
+raw,3,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.0038194444444444443,0.26157322223039536,0.403699719591307,0.5833333333333334
+raw,3,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,-0.0018477182539682533,0.18441206546754954,0.20095672467466286,0.5694444444444444
+raw,3,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.00328621031746032,0.10430985568889757,0.01748474762742669,0.5486111111111112
+raw,3,logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,-0.008457341269841276,0.15684052681937857,0.13540345526422115,0.5416666666666666
+raw,3,logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,-0.015327380952380952,0.05589303309363781,-0.0760218917108183,0.5416666666666666
+raw,3,logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,-0.006932043650793649,0.04448702356013513,-0.11394574081498077,0.5416666666666666
+raw,3,logistic_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,-0.0051835317460317614,0.09540613268734818,0.00310461572196008,0.5555555555555556
+raw,3,logistic_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,-0.002554563492063508,0.10982397134648755,0.02799032663725476,0.5347222222222222
+raw,3,logistic_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,-0.012822420634920638,0.026797114792880904,-0.13688576096354876,0.5416666666666666
+raw,3,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale,0.022383432539682543,0.2895404441634424,0.4443077656840462,0.5763888888888888
+raw,3,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale,0.0328249007936508,0.2471466355892105,0.3358489239969138,0.5763888888888888
+raw,3,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale,0.02800099206349207,0.3176661151159789,0.5392472549931633,0.5694444444444444
+raw,3,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale,0.02390873015873016,0.26873584845500614,0.3915149027437519,0.5763888888888888
+raw,3,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_2d_residual_images,0.029761904761904764,0.21036914369744628,0.2473185812123304,0.5763888888888888
+raw,3,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.01976686507936508,0.294817811557564,0.4683962979661669,0.5694444444444444
+raw,3,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.026649305555555555,0.3862709018166058,0.7561345850196588,0.5763888888888888
+raw,3,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.02586805555555556,0.30983616471081327,0.5114763954691228,0.5902777777777778
+raw,3,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.03244047619047619,0.25192792962875765,0.3460457499906673,0.5694444444444444
+raw,3,cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.028261408730158744,0.2905267901574607,0.46763361888592403,0.5416666666666666
+raw,3,cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.02327628968253969,0.1735151657319359,0.15917398013242212,0.5555555555555556
+raw,3,cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.03506944444444445,0.18028778612542987,0.17489326765510738,0.5555555555555556
+raw,3,cnn_1d_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.018365575396825394,0.27078962537562123,0.41184740245960216,0.5416666666666666
+raw,3,cnn_1d_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.03539186507936508,0.24786142369776618,0.3462700380159325,0.5625
+raw,3,cnn_1d_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.03075396825396826,0.19805459296369546,0.2198257631274525,0.5625
+raw,3,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.023412698412698413,0.2957124767235669,0.4669732264550146,0.5694444444444444
+raw,3,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.018427579365079366,0.40918657043101536,0.8295393905398738,0.6111111111111112
+raw,3,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.025806051587301593,0.34867048479544793,0.6220669001446235,0.5833333333333334
+raw,3,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.026959325396825405,0.28512072327548593,0.43268313639541933,0.5694444444444444
+raw,3,cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.025248015873015877,0.2779216045353062,0.43043504547571887,0.5347222222222222
+raw,3,cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.029203869047619048,0.20644000605320104,0.2385046380636746,0.5763888888888888
+raw,3,cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.025037202380952382,0.2251160739599095,0.2831747389967758,0.5486111111111112
+raw,3,cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.025781250000000006,0.3201058276465129,0.5426412160421099,0.5763888888888888
+raw,3,cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.026041666666666668,0.22873380164804513,0.29509226623322915,0.5625
+raw,3,cnn_2d_rendered_images + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.02260664682539683,0.16021920911173795,0.13517030943150865,0.5486111111111112
+raw,3,cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.03201884920634922,0.3741628879721114,0.7200707802722235,0.5694444444444444
+raw,3,cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.025446428571428575,0.29169311703951745,0.466132563537375,0.5902777777777778
+raw,3,cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.03718998015873016,0.275868945463093,0.419367091737183,0.5486111111111112
+raw,3,cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.02527281746031747,0.3883054230523234,0.7664531781745343,0.5972222222222222
+raw,3,cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.03231646825396826,0.28581930797662775,0.43939428826996485,0.5625
+raw,3,cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.03329613095238096,0.24661370020594897,0.3364899458776205,0.5555555555555556
+raw,3,cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.03143601190476191,0.26317054245543525,0.39413492599661026,0.5486111111111112
+raw,3,cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.04043898809523811,0.22225439572713496,0.2838225050480798,0.5486111111111112
+raw,3,cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.03268849206349207,0.12581002935205876,0.05618004060582105,0.5277777777777778
+raw,3,cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.031547619047619054,0.24948391337276,0.35024362941229126,0.5625
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_rendered_images,0.013479662698412697,0.181933670266119,0.19521070924710493,0.5763888888888888
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale,0.019233630952380957,0.2157184028792637,0.27779737571538776,0.5833333333333334
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale,0.020696924603174606,0.1896479432356587,0.21508571346979477,0.5694444444444444
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_dilated_image_scale,0.018452380952380956,0.20888464939425655,0.2621657999924387,0.5486111111111112
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_multiscale_image_scale,0.01438492063492063,0.20228551291072003,0.24551048128770958,0.5694444444444444
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_residual_images,0.01418650793650794,0.12058739346111165,0.050851664095564963,0.5763888888888888
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale,0.016666666666666663,0.23174839461048002,0.3233386540784977,0.5625
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale,0.017274305555555564,0.2359012874286079,0.3362071329293994,0.5555555555555556
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale,0.012934027777777777,0.2568425268497114,0.3923814719839567,0.5347222222222222
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale,0.012958829365079364,0.19692175341678048,0.23278037346065705,0.5555555555555556
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_2d_rendered_images + cnn_2d_residual_images,0.014707341269841273,0.1013477760475222,0.009064302428358983,0.5625
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.021862599206349212,0.24750289566011402,0.36888780666377796,0.5833333333333334
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.020250496031746026,0.26102825062996293,0.4026355323727513,0.5694444444444444
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.016579861111111115,0.24832090765577672,0.3658937524464325,0.5902777777777778
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.02242063492063493,0.2043618625997471,0.2524503916219156,0.5763888888888888
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.020089285714285712,0.3427605081531371,0.6612080945060952,0.5763888888888888
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.01691468253968255,0.2097823383379372,0.2667064726638477,0.5625
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.021701388888888902,0.1259290280369053,0.06053280799337801,0.5555555555555556
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.02099454365079365,0.23639053605377236,0.32992412539613913,0.5694444444444444
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.02140376984126984,0.2294179146264389,0.31953767947048317,0.5486111111111112
+raw,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.01374007936507937,0.1029678930982407,0.014958244445561819,0.5625
+raw,4,logistic_image_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale,0.03234126984126985,0.286313598576751,0.4436206686610187,0.5555555555555556
+raw,4,logistic_image_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale,0.036842757936507944,0.2977870423951997,0.4707175332953304,0.5555555555555556
+raw,4,logistic_image_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale,0.03531746031746032,0.2650290606421692,0.3956709530082603,0.5347222222222222
+raw,4,logistic_image_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale,0.029724702380952393,0.18500181153371853,0.18985242258308022,0.5416666666666666
+raw,4,logistic_image_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_2d_residual_images,0.028435019841269855,0.17786969805330965,0.1825114757492401,0.5694444444444444
+raw,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.029290674603174614,0.25457998124557374,0.3629060689792074,0.5694444444444444
+raw,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.03375496031746032,0.32143124910208326,0.5602021673822621,0.5833333333333334
+raw,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.029117063492063482,0.3441410972601499,0.5954391960480279,0.5902777777777778
+raw,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.036966765873015874,0.23541142575340115,0.30737155030753605,0.5763888888888888
+raw,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.044109623015873026,0.2915617390899427,0.4734944692102325,0.5625
+raw,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.03717757936507937,0.2563271245008546,0.3655656777710361,0.5416666666666666
+raw,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.03695436507936509,0.17766851835531855,0.18300242752328777,0.5486111111111112
+raw,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.04249751984126986,0.32481393406993025,0.5678610455772195,0.5625
+raw,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.04511408730158731,0.2709123420478399,0.40863313719481553,0.5555555555555556
+raw,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.034796626984126985,0.10370546297759349,0.030821071793865507,0.5486111111111112
+raw,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.03521825396825397,0.34080398024136077,0.6159358569829307,0.5763888888888888
+raw,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.029910714285714304,0.35958671198907316,0.67622555946888,0.5694444444444444
+raw,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.02966269841269842,0.3672153615621148,0.6957006014708116,0.5972222222222222
+raw,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.03550347222222222,0.2818498307310791,0.42861415709240136,0.5555555555555556
+raw,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.03423859126984128,0.25353063921543045,0.36406247750772347,0.5555555555555556
+raw,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.030282738095238102,0.24473134508791303,0.34458439436308796,0.5486111111111112
+raw,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.03399057539682541,0.2487278645598063,0.35078810998257093,0.5486111111111112
+raw,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.034412202380952384,0.3485678162260015,0.6584275022559136,0.5625
+raw,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.03387896825396826,0.30494749164995055,0.5035143485781937,0.5625
+raw,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.031944444444444456,0.1458426058091807,0.10314848705789359,0.5694444444444444
+raw,4,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.03807043650793652,0.36353649963433976,0.7030105258515322,0.5902777777777778
+raw,4,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.030481150793650807,0.22049643718305087,0.28137918920185645,0.5833333333333334
+raw,4,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.041183035714285714,0.33977114668023894,0.5917416413940342,0.5694444444444444
+raw,4,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.03823164682539683,0.37783333847636874,0.7646812330558708,0.5902777777777778
+raw,4,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.04176587301587302,0.2854491415519032,0.4535341920737961,0.5763888888888888
+raw,4,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.03585069444444445,0.3022229451012393,0.4822941052063021,0.5555555555555556
+raw,4,logistic_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.048028273809523826,0.3760228903617793,0.7562691072687171,0.5833333333333334
+raw,4,logistic_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.0453373015873016,0.3026478057417542,0.5074899381323625,0.5625
+raw,4,logistic_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.039236111111111124,0.28602481659782103,0.4619945115081123,0.5694444444444444
+raw,4,logistic_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.04682539682539684,0.34271704001176273,0.6253928585802802,0.5694444444444444
+raw,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale,-0.0005828373015873023,0.1822083523637137,0.19554410909243836,0.5694444444444444
+raw,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale,-0.008048115079365075,0.12481715550869335,0.0647911425269534,0.5486111111111112
+raw,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale,-0.004699900793650796,0.12147183250026194,0.05859323652092363,0.5486111111111112
+raw,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale,-0.015761408730158733,0.16216887724857,0.1485819100950232,0.5555555555555556
+raw,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_2d_residual_images,-0.011693948412698413,0.01756794176943166,-0.15039241857703767,0.5416666666666666
+raw,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.004005456349206357,0.1904949866233793,0.21606851989902154,0.5555555555555556
+raw,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.00962301587301588,0.22275564001315928,0.29408251104247385,0.5763888888888888
+raw,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.0014508928571428529,0.23821971611011747,0.3358362889390827,0.5763888888888888
+raw,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_2d_residual_images,-0.0005952380952380931,0.132968823359373,0.08026746874779156,0.5486111111111112
+raw,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.0034350198412698447,0.19386398865856302,0.22523762563759075,0.5416666666666666
+raw,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,-0.004613095238095245,0.019281378596871922,-0.14206057465806765,0.5555555555555556
+raw,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,-0.0017733134920634886,0.02360835277962417,-0.144164959701233,0.5416666666666666
+raw,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.0026413690476190443,0.13260925347297053,0.08252093190662824,0.5555555555555556
+raw,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.002529761904761902,0.09563499335716501,-0.0007447578964874246,0.5416666666666666
+raw,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,-0.010639880952380956,-0.007576219769637826,-0.19300772324938098,0.5347222222222222
+raw,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.0011408730158730155,0.20895568491807565,0.2619168876534579,0.5555555555555556
+raw,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.0025545634920634934,0.22789938506104804,0.3087764828597628,0.5625
+raw,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,-0.0023313492063492093,0.20607913618715357,0.2545352278073221,0.5694444444444444
+raw,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.0016121031746031732,0.1183374274178421,0.04974939140622703,0.5486111111111112
+raw,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,-0.009052579365079375,0.11029276980681753,0.03452254979604885,0.5347222222222222
+raw,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,-0.021217757936507934,0.14409728696870758,0.10749819802774363,0.5555555555555556
+raw,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_2d_residual_images,-0.007440476190476187,0.09955646739004452,0.0050437888787886465,0.5347222222222222
+raw,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,-0.011210317460317466,0.18456171242391572,0.20168201746785508,0.5555555555555556
+raw,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_2d_residual_images,-0.004402281746031747,0.07660978246433647,-0.036602528688685965,0.5347222222222222
+raw,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,-0.01037946428571428,0.06848507229061614,-0.05969472055622871,0.5555555555555556
+raw,4,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.0053199404761904755,0.2513872374590762,0.37486051678512644,0.5486111111111112
+raw,4,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.00026041666666666666,0.16742018619378096,0.16048288840448244,0.5416666666666666
+raw,4,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.008345734126984134,0.20244820335219074,0.24709811890559763,0.5625
+raw,4,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.008444940476190483,0.27317438030385666,0.42896674121306955,0.6041666666666666
+raw,4,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.0076512896825396874,0.15842909166550886,0.13856776859520514,0.5555555555555556
+raw,4,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.0027405753968254005,0.14658425628425456,0.11103704145038984,0.5555555555555556
+raw,4,logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.0006076388888888889,0.133631979605798,0.08456658228884506,0.5486111111111112
+raw,4,logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.0026661706349206307,0.14876602995147434,0.11472525377222298,0.5416666666666666
+raw,4,logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,-0.011842757936507943,0.08547732832182085,-0.024167732353070903,0.5416666666666666
+raw,4,logistic_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.0018229166666666717,0.06396412802618241,-0.06430015462546279,0.5277777777777778
+raw,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.026475694444444444,0.2765310922910483,0.4135684961181052,0.5763888888888888
+raw,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.023623511904761908,0.3630223406142227,0.6738555637196948,0.5833333333333334
+raw,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.027901785714285726,0.24924977909155438,0.34478689927552564,0.5833333333333334
+raw,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.03503224206349207,0.289008254143919,0.44531805966173255,0.5694444444444444
+raw,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.029439484126984133,0.25870163950462716,0.376392788642947,0.5555555555555556
+raw,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.027070932539682544,0.19635227216754825,0.2100419619222369,0.5416666666666666
+raw,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.03054315476190477,0.18078628739818892,0.17539717976197955,0.5625
+raw,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.02764136904761905,0.29850371555945376,0.4791214230111649,0.5694444444444444
+raw,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.03371775793650795,0.22738800954432956,0.29199591381082923,0.5625
+raw,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.03415178571428572,0.19346128947506885,0.20820668600766323,0.5555555555555556
+raw,4,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.02998511904761905,0.32282429855083855,0.5540912165466043,0.5486111111111112
+raw,4,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.02501240079365079,0.26256006547462996,0.38299652368187287,0.5763888888888888
+raw,4,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.03561507936507938,0.24197062997757468,0.3249189724159476,0.5763888888888888
+raw,4,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.026140873015873017,0.45268051314098595,1.0147675606149598,0.5833333333333334
+raw,4,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.03859126984126985,0.29828148179558067,0.4784846089220851,0.5625
+raw,4,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.035553075396825395,0.3102830231901876,0.51396119195613,0.5763888888888888
+raw,4,cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.023883928571428573,0.2543692466839915,0.3667917647101562,0.5486111111111112
+raw,4,cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.04077380952380953,0.23337774061783234,0.312624923168789,0.5555555555555556
+raw,4,cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.031001984126984128,0.20442365353425637,0.23066039636522406,0.5555555555555556
+raw,4,cnn_1d_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.02967509920634921,0.2622571370460208,0.38877946577661127,0.5625
+raw,4,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.023164682539682544,0.4036757943145433,0.8171181735337691,0.5763888888888888
+raw,4,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.028249007936507937,0.33631647799389625,0.5899055414618335,0.5763888888888888
+raw,4,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.02875744047619048,0.23475338409275107,0.30311815235948925,0.5694444444444444
+raw,4,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.022966269841269846,0.41012356728533356,0.8471598121076325,0.6041666666666666
+raw,4,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.026128472222222227,0.2760171236862722,0.41851324967872006,0.5833333333333334
+raw,4,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.0337797619047619,0.23895315243253848,0.31741368079711263,0.5694444444444444
+raw,4,cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.030071924603174614,0.3086395579482397,0.5165165448158797,0.5625
+raw,4,cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.028410218253968254,0.23436114681616954,0.31070668797771384,0.5416666666666666
+raw,4,cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.028410218253968254,0.16822849257506606,0.1472893371093147,0.5555555555555556
+raw,4,cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.03291170634920636,0.22675898095041247,0.2892703705106765,0.5486111111111112
+raw,4,cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.028819444444444446,0.38596352210774726,0.7703058320686169,0.5833333333333334
+raw,4,cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.03416418650793652,0.26767538680813685,0.3963680587517715,0.5625
+raw,4,cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.03524305555555556,0.24775253791199517,0.34180103743493095,0.5486111111111112
+raw,4,cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.03159722222222223,0.3163175368089141,0.5466128523663791,0.5694444444444444
+raw,4,cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.03690476190476191,0.25005852864184236,0.352572340037677,0.5625
+rank,1,logistic_image_scale,0.03924851190476191,0.38500929176343807,0.6569180682499105,0.5902777777777778
+rank,1,logistic_cumulative_scale,-0.007217261904761907,0.07643795194437607,-0.05122835965927475,0.5555555555555556
+rank,1,cnn_1d_image_scale,-0.001004464285714283,0.07272599856082221,-0.04692768954985116,0.5486111111111112
+rank,1,cnn_2d_rendered_images,0.002194940476190475,0.20192275551052374,0.22900550409906772,0.5694444444444444
+rank,1,cnn_1d_attention_image_scale,0.023127480158730167,0.2681053526198874,0.39175317958670086,0.5902777777777778
+rank,1,cnn_1d_cumulative_scale,0.027095734126984128,0.5214478524828869,0.9977374615768371,0.5902777777777778
+rank,1,cnn_1d_dilated_image_scale,0.027963789682539684,0.35437782903443815,0.6661490312217502,0.5694444444444444
+rank,1,cnn_1d_multiscale_image_scale,0.008692956349206344,0.24587455819518209,0.34244988462400405,0.5833333333333334
+rank,1,cnn_2d_residual_images,0.007226267715429987,0.09561768049766343,0.01536367262259164,0.5486111111111112
+rank,2,logistic_image_scale + logistic_cumulative_scale,0.01954031019024781,0.17898561402289156,0.18712295770329113,0.5694444444444444
+rank,2,logistic_image_scale + cnn_1d_image_scale,0.015707181605535005,0.2025130514654977,0.23740177323811085,0.5555555555555556
+rank,2,logistic_image_scale + cnn_2d_rendered_images,0.02375048192344009,0.33140344137844424,0.584613300829937,0.5972222222222222
+rank,2,logistic_image_scale + cnn_1d_attention_image_scale,0.03340105735365744,0.5564308333265511,1.131119486533013,0.6111111111111112
+rank,2,logistic_image_scale + cnn_1d_cumulative_scale,0.04510245185236396,0.43007865660933864,0.8000726332157941,0.5902777777777778
+rank,2,logistic_image_scale + cnn_1d_dilated_image_scale,0.03831722259491479,0.3776856501222104,0.7536490723863347,0.5972222222222222
+rank,2,logistic_image_scale + cnn_1d_multiscale_image_scale,0.030951363511096102,0.44026810562306196,0.9609773185851791,0.5972222222222222
+rank,2,logistic_image_scale + cnn_2d_residual_images,0.021382776529934797,0.3131045443340852,0.5203717027214567,0.5694444444444444
+rank,2,logistic_cumulative_scale + cnn_1d_image_scale,-0.010476443482962205,0.15204279577324478,0.12332932783318196,0.5833333333333334
+rank,2,logistic_cumulative_scale + cnn_2d_rendered_images,-0.014089151065860244,0.10868199478625903,0.028546633762635887,0.5694444444444444
+rank,2,logistic_cumulative_scale + cnn_1d_attention_image_scale,0.010895641664815556,0.15151720193346474,0.12194093307754494,0.5833333333333334
+rank,2,logistic_cumulative_scale + cnn_1d_cumulative_scale,0.009559682653020814,0.32510821563426207,0.5822722020888262,0.5625
+rank,2,logistic_cumulative_scale + cnn_1d_dilated_image_scale,0.004305186719806215,0.16886383103840247,0.16434622824740575,0.5486111111111112
+rank,2,logistic_cumulative_scale + cnn_1d_multiscale_image_scale,-0.006132729603554596,0.22603374599665765,0.30817346320952277,0.5902777777777778
+rank,2,logistic_cumulative_scale + cnn_2d_residual_images,-0.008824388480194758,0.057610641503992026,-0.08115231275012524,0.5694444444444444
+rank,2,cnn_1d_image_scale + cnn_2d_rendered_images,0.005322425064836498,0.21583465060438795,0.2630107284611638,0.5763888888888888
+rank,2,cnn_1d_image_scale + cnn_1d_attention_image_scale,0.004423295589892115,0.25478943694849815,0.36252830825210447,0.5972222222222222
+rank,2,cnn_1d_image_scale + cnn_1d_cumulative_scale,0.0157113887808951,0.18050157347297177,0.1827181743774302,0.5625
+rank,2,cnn_1d_image_scale + cnn_1d_dilated_image_scale,0.01755471826920103,0.20933675533799617,0.249957960229078,0.5625
+rank,2,cnn_1d_image_scale + cnn_1d_multiscale_image_scale,0.0021511032995760945,0.18161289830804378,0.18225728168688282,0.5555555555555556
+rank,2,cnn_1d_image_scale + cnn_2d_residual_images,0.006722146388098591,0.11266051546713274,0.03358979712734311,0.5416666666666666
+rank,2,cnn_2d_rendered_images + cnn_1d_attention_image_scale,0.017278428560586888,0.27019693809959516,0.39469966092394215,0.5694444444444444
+rank,2,cnn_2d_rendered_images + cnn_1d_cumulative_scale,0.017657900080908506,0.19977326331175335,0.23089470936257261,0.5486111111111112
+rank,2,cnn_2d_rendered_images + cnn_1d_dilated_image_scale,0.017406129181405446,0.2794748937574804,0.4275736728295769,0.5833333333333334
+rank,2,cnn_2d_rendered_images + cnn_1d_multiscale_image_scale,0.009495601662836901,0.26068024559199826,0.375870432362555,0.5694444444444444
+rank,2,cnn_2d_rendered_images + cnn_2d_residual_images,-0.002017093832137294,0.13089068267682388,0.07203946716151743,0.5625
+rank,2,cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.03394799164884565,0.27184070934777105,0.41638348728673513,0.5833333333333334
+rank,2,cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.027444884042677305,0.25434316387458844,0.36332280201304856,0.5972222222222222
+rank,2,cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.014038986277692844,0.2713059642432062,0.4043213974178397,0.5833333333333334
+rank,2,cnn_1d_attention_image_scale + cnn_2d_residual_images,0.020653569792495358,0.23677745841764894,0.3081679144556406,0.5763888888888888
+rank,2,cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.030447346868569983,0.24451546904734855,0.3421003061597183,0.5972222222222222
+rank,2,cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.024373689458750587,0.23231487356548153,0.3158712518663447,0.5972222222222222
+rank,2,cnn_1d_cumulative_scale + cnn_2d_residual_images,0.01986740799871063,0.16557456088083883,0.14930988328611883,0.5555555555555556
+rank,2,cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.018835035995633295,0.20939656640139875,0.25157200107943756,0.5625
+rank,2,cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.02167442867442643,0.24224139154744936,0.3339987524110444,0.5555555555555556
+rank,2,cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.007934622568717221,0.23598898006906277,0.3144680921721714,0.5486111111111112
+rank,3,logistic_image_scale + logistic_cumulative_scale + cnn_1d_image_scale,0.009329343102234846,0.1641368904364408,0.1527035202240612,0.5555555555555556
+rank,3,logistic_image_scale + logistic_cumulative_scale + cnn_2d_rendered_images,0.010114302642671182,0.23194197375152123,0.32452019007851773,0.5625
+rank,3,logistic_image_scale + logistic_cumulative_scale + cnn_1d_attention_image_scale,0.023341065175590633,0.326059546452125,0.5956888389802544,0.5833333333333334
+rank,3,logistic_image_scale + logistic_cumulative_scale + cnn_1d_cumulative_scale,0.029405073930617566,0.34819396204294967,0.6245008360472655,0.5486111111111112
+rank,3,logistic_image_scale + logistic_cumulative_scale + cnn_1d_dilated_image_scale,0.02766776146025929,0.34048053479120854,0.6611014672713682,0.5555555555555556
+rank,3,logistic_image_scale + logistic_cumulative_scale + cnn_1d_multiscale_image_scale,0.019963178409488747,0.30424121579860214,0.5388628883794333,0.5694444444444444
+rank,3,logistic_image_scale + logistic_cumulative_scale + cnn_2d_residual_images,0.012848383009688567,0.06934851856615397,-0.047160632093920074,0.5416666666666666
+rank,3,logistic_image_scale + cnn_1d_image_scale + cnn_2d_rendered_images,0.010208776565792513,0.1844813159857588,0.18975525449911124,0.5694444444444444
+rank,3,logistic_image_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale,0.015413549432742014,0.1839284135036122,0.1882429514046562,0.5486111111111112
+rank,3,logistic_image_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale,0.03195216732230677,0.23950257368750907,0.33037778366813786,0.5486111111111112
+rank,3,logistic_image_scale + cnn_1d_image_scale + cnn_1d_dilated_image_scale,0.02308157138776268,0.28499751298552095,0.4540086810524211,0.5486111111111112
+rank,3,logistic_image_scale + cnn_1d_image_scale + cnn_1d_multiscale_image_scale,0.015261108134074346,0.17329502486933768,0.16361098887294623,0.5625
+rank,3,logistic_image_scale + cnn_1d_image_scale + cnn_2d_residual_images,0.006736241093055965,0.1644776386288051,0.15410634060229333,0.5416666666666666
+rank,3,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale,0.02445615438998539,0.3179938100622077,0.530162756817016,0.5902777777777778
+rank,3,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale,0.026935360834227425,0.30268082578246897,0.5027555195205455,0.5416666666666666
+rank,3,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale,0.024137048915249613,0.33298365112547273,0.5878539686184201,0.5833333333333334
+rank,3,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale,0.021169036503861777,0.27844705129691777,0.4292642642913931,0.5833333333333334
+rank,3,logistic_image_scale + cnn_2d_rendered_images + cnn_2d_residual_images,0.008036238450584111,0.2801706359939049,0.42323381365625634,0.5833333333333334
+rank,3,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.04169725201634806,0.5031972632236056,1.0532685834663584,0.5694444444444444
+rank,3,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.03214193855997591,0.2648515944532198,0.3877739848031774,0.5694444444444444
+rank,3,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.02912472902231807,0.3658606282125905,0.7097541194294195,0.5972222222222222
+rank,3,logistic_image_scale + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.026983778103344278,0.3613146951883,0.639712650454167,0.5625
+rank,3,logistic_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.04388458213462245,0.38932405495108996,0.8142138145882425,0.5763888888888888
+rank,3,logistic_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.0347977332052818,0.5659537981605287,1.2744359428463499,0.5902777777777778
+rank,3,logistic_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.033884791959330335,0.3835307527182052,0.7338128194860734,0.5625
+rank,3,logistic_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.036273109554891936,0.3889815487631419,0.7893585108615515,0.5902777777777778
+rank,3,logistic_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.027625143931911744,0.37097285143882025,0.6942650596093407,0.5625
+rank,3,logistic_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.021907045986214745,0.3387656938681353,0.6098993069544314,0.5833333333333334
+rank,3,logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_rendered_images,-0.012816156135507099,0.167147003041215,0.16024032450359194,0.5555555555555556
+rank,3,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale,-0.004646056783172112,0.2831295389766855,0.4548287799278288,0.5902777777777778
+rank,3,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale,0.011314543785475098,0.31009601095687295,0.5523559454317895,0.5763888888888888
+rank,3,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_dilated_image_scale,-0.0037416617478353603,0.21950215590800248,0.28842543306511015,0.5416666666666666
+rank,3,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_multiscale_image_scale,-0.0035204241594379996,0.24009276365448737,0.3348643801368938,0.5833333333333334
+rank,3,logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_residual_images,-0.01017962189131284,0.055407632036416514,-0.07381140176337053,0.5416666666666666
+rank,3,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale,0.003781480687135165,0.2909572710912008,0.48028316668036575,0.5833333333333334
+rank,3,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale,0.0043314324757115,0.20260730525787726,0.2492305001158912,0.5416666666666666
+rank,3,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale,-0.00382286790690221,0.2632420319261276,0.4013733070387131,0.5763888888888888
+rank,3,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale,-0.00619212025501332,0.2183641043166682,0.28500067932803685,0.5625
+rank,3,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_2d_residual_images,-0.011219412511222401,0.07784906279935093,-0.023940142965071742,0.5625
+rank,3,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.013079303347172446,0.32376734467558554,0.5991685330018519,0.5763888888888888
+rank,3,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.011510320135538817,0.264117523539586,0.40730941904434514,0.5833333333333334
+rank,3,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.013588022283709339,0.1845870018029684,0.20092433441452595,0.5833333333333334
+rank,3,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.0038094191475746613,0.12969408028050755,0.07714879765337335,0.5694444444444444
+rank,3,logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.018480035283448222,0.3238097706580789,0.5889480049108053,0.5902777777777778
+rank,3,logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.012497236746280156,0.2455144611660612,0.3558167367201508,0.5972222222222222
+rank,3,logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.003835594326189493,0.056314400984496964,-0.07263285838868794,0.5416666666666666
+rank,3,logistic_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.010092062414977013,0.1686598202818175,0.16340528967599854,0.5694444444444444
+rank,3,logistic_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.003134994947136059,0.2632275337971055,0.413360223294406,0.5486111111111112
+rank,3,logistic_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,-0.004637385124622972,0.21783677149194064,0.28512594766845245,0.5833333333333334
+rank,3,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale,0.010637792913853496,0.20096699442585741,0.22665596551830025,0.5416666666666666
+rank,3,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale,0.01096625009235929,0.1943765379232027,0.21497109043448615,0.5486111111111112
+rank,3,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale,0.01608163059894355,0.19501791732992024,0.21398126507073711,0.5486111111111112
+rank,3,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale,0.010514224416349537,0.24950896923709567,0.3451440843168363,0.5763888888888888
+rank,3,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_2d_residual_images,0.0007027906458701993,0.10958529601082301,0.0287266662513197,0.5486111111111112
+rank,3,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.01755312426947508,0.2824470013007154,0.4382336641509019,0.5763888888888888
+rank,3,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.0185524995231498,0.23294159838254344,0.30791508808153956,0.5833333333333334
+rank,3,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.012806647231080725,0.1885203738087393,0.19804167954438712,0.5694444444444444
+rank,3,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.009388428293024036,0.2007222572808459,0.2266452031593802,0.5555555555555556
+rank,3,cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.018443868138498545,0.2774021066154779,0.4310914519964375,0.5416666666666666
+rank,3,cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.013036092193655133,0.2990656382480473,0.48975135703540684,0.5833333333333334
+rank,3,cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.004135189209969244,0.12561182532939436,0.06031964491900288,0.5625
+rank,3,cnn_1d_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.017317166555228188,0.27348105087326835,0.42073272716371735,0.5555555555555556
+rank,3,cnn_1d_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.014760942086485419,0.1681858323901287,0.15344601372690425,0.5694444444444444
+rank,3,cnn_1d_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.005680064978240575,0.15392396315441562,0.12031413930361468,0.5694444444444444
+rank,3,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.02428361853675842,0.33332169189619326,0.5858894101406604,0.5763888888888888
+rank,3,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.022980207651385174,0.2648593986109119,0.3818582675899125,0.5902777777777778
+rank,3,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.017809618079803545,0.30694404504973827,0.495157940408292,0.5902777777777778
+rank,3,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.009274458944253884,0.2753833436103211,0.40740031697015633,0.5972222222222222
+rank,3,cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.028337287743128728,0.29238473632013423,0.47075521534437326,0.5416666666666666
+rank,3,cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.01440609039826502,0.23125746354557902,0.30513700967031987,0.5625
+rank,3,cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.007100109872380355,0.23244016152270583,0.3051049764565035,0.5486111111111112
+rank,3,cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.023811805291885365,0.24350884935695963,0.32740973048985356,0.5625
+rank,3,cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.011067915931894448,0.19911060708603234,0.22137469693612766,0.5486111111111112
+rank,3,cnn_2d_rendered_images + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.005263902143803276,0.23301198868184436,0.3048656819418314,0.5694444444444444
+rank,3,cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.03520295599040714,0.22834201480993596,0.2935734732433719,0.5763888888888888
+rank,3,cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.02836070653531795,0.25313906858342755,0.35956715781656,0.5972222222222222
+rank,3,cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.024009607440809214,0.2533990850442058,0.36207489875714516,0.5625
+rank,3,cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.02479425578182485,0.3351947794627872,0.5841312910424266,0.5902777777777778
+rank,3,cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.026898640075791253,0.22219518445270453,0.2799870963847584,0.5555555555555556
+rank,3,cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.02165924718449338,0.21116444599144893,0.25116457230047917,0.5555555555555556
+rank,3,cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.03121314325029793,0.1686320758389264,0.1562974274403892,0.5486111111111112
+rank,3,cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.029250095825189042,0.24419285465844875,0.3374144210388419,0.5555555555555556
+rank,3,cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.01287385575951215,0.2945149655766126,0.48347076158121904,0.5694444444444444
+rank,3,cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.023518615267280347,0.21699242774630007,0.2681202132137068,0.5694444444444444
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_rendered_images,0.0017154749028711342,0.22518534381080027,0.3022088092946371,0.5625
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale,0.015353913710425281,0.2651017073044644,0.40239808399089294,0.5833333333333334
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale,0.02077464691394642,0.2011268473072617,0.24481791467882963,0.5694444444444444
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_dilated_image_scale,0.013040888464193367,0.2760819979646755,0.44304911219193555,0.5416666666666666
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_multiscale_image_scale,0.013515170841254375,0.25332949161822527,0.3722337336642483,0.5763888888888888
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_residual_images,0.0017920869545699873,0.0983342137718485,0.013330123034553942,0.5486111111111112
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale,0.013161850598090363,0.29001671228203896,0.4770058298872468,0.5694444444444444
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale,0.019416677762012155,0.27471321700939944,0.4384056318664684,0.5486111111111112
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale,0.009387432967343476,0.2512184997317155,0.37241769447086215,0.5486111111111112
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale,0.005224697133028538,0.363352743316048,0.720009691919113,0.5972222222222222
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_2d_rendered_images + cnn_2d_residual_images,0.00055439613633296,0.14309644107907044,0.10517993054889008,0.5694444444444444
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.0293015579291626,0.33477190193931544,0.6108551239358997,0.5625
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.02279459568414273,0.3396348953163705,0.6293520842836358,0.5763888888888888
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.020613700938228577,0.3414152213562407,0.6401858471243369,0.6041666666666666
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.014133777733736823,0.1605435601691398,0.14462747338523574,0.5555555555555556
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.031806274535140684,0.36314616341705636,0.7097875003044471,0.5902777777777778
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.02443176828187406,0.2563080360632422,0.3894620724870701,0.5833333333333334
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.015756805332833492,0.13005313339060626,0.07373875230482607,0.5763888888888888
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.02868426533247904,0.3788996020611325,0.7899835341773691,0.5763888888888888
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.01583354623590779,0.254724518826291,0.39046149445242095,0.5694444444444444
+rank,4,logistic_image_scale + logistic_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.010808465993856365,0.20387720315486105,0.2484606529408968,0.5763888888888888
+rank,4,logistic_image_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale,0.01311200333113703,0.2175151558262359,0.2672440755691685,0.5694444444444444
+rank,4,logistic_image_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale,0.020690753458568682,0.24668918271924029,0.34348035508695673,0.5416666666666666
+rank,4,logistic_image_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale,0.015728122866929223,0.24797047603550226,0.3438526758895888,0.5694444444444444
+rank,4,logistic_image_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale,0.008928971279434754,0.2190508115591544,0.27043080518709206,0.5694444444444444
+rank,4,logistic_image_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_2d_residual_images,0.005278183330790068,0.12180336106063895,0.054912169624515395,0.5486111111111112
+rank,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.026103351515049944,0.2585029313385329,0.37480711127526023,0.5763888888888888
+rank,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.017167209388906108,0.24862649814672594,0.34539411580122725,0.5694444444444444
+rank,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.016203667285213053,0.29164229785868867,0.4651915726408553,0.5694444444444444
+rank,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.012248002912199856,0.2424936914359175,0.3229500728647978,0.5555555555555556
+rank,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.030285264102115555,0.20900128266896706,0.250549548428179,0.5486111111111112
+rank,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.02771004521815199,0.31610729755876243,0.5495946250992829,0.5625
+rank,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.015858526896028277,0.24250750186975395,0.3367248697625862,0.5486111111111112
+rank,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.0236274719025425,0.22288281827055773,0.2811119931371209,0.5694444444444444
+rank,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.017360589753291553,0.15061715285615337,0.11348831656450886,0.5486111111111112
+rank,4,logistic_image_scale + cnn_1d_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.013574015951073102,0.2762820309385497,0.41616950861565005,0.5763888888888888
+rank,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.037307616975840195,0.36076578400306186,0.6914776731901391,0.5625
+rank,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.02610057663844227,0.3238451923284969,0.5685729560098738,0.5833333333333334
+rank,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.02025822224568979,0.314526981295774,0.532848321900818,0.5902777777777778
+rank,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.014427702047909658,0.2695118105771562,0.39405672714160067,0.5763888888888888
+rank,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.036618226663341004,0.3784028234722385,0.7617929297468595,0.5694444444444444
+rank,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.028349883102985137,0.3389598008968243,0.6318122888707955,0.5625
+rank,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.015375743273418004,0.32614389149761236,0.5718012166354038,0.5763888888888888
+rank,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.02784344315127111,0.34669447578252816,0.6339959662118375,0.5902777777777778
+rank,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.017045464440582938,0.2876851141956255,0.4467655409593383,0.5625
+rank,4,logistic_image_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.01663987661389055,0.24267491109196884,0.33195966808403465,0.5625
+rank,4,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.03887471429407895,0.37604178983093317,0.7605643701668225,0.5694444444444444
+rank,4,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.033717454220817906,0.3480007714864654,0.6568013412358826,0.5833333333333334
+rank,4,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.03281612894285694,0.3781601564214669,0.7467181116520747,0.5763888888888888
+rank,4,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.03051246162832,0.32348264430988577,0.5701724038808182,0.6041666666666666
+rank,4,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.025116265704912176,0.3353242502425388,0.5892568427983196,0.5763888888888888
+rank,4,logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.029354378695329766,0.337301663708787,0.5866832450898738,0.5763888888888888
+rank,4,logistic_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.04063013975303021,0.3056680104485866,0.5171077992795055,0.5763888888888888
+rank,4,logistic_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.03630732180990715,0.3543232591612512,0.6679107622547102,0.5833333333333334
+rank,4,logistic_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.023664164772723435,0.3098966569336565,0.535927641449186,0.5694444444444444
+rank,4,logistic_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.030947277412957566,0.3046264457406373,0.5105919612711074,0.5833333333333334
+rank,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale,-0.0014926536709381304,0.23412532885760898,0.3139721250394649,0.5833333333333334
+rank,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale,0.006080896435020838,0.26034856735940215,0.39321967576420014,0.5625
+rank,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale,0.0009733218094330882,0.13603062257269147,0.08005482989796153,0.5625
+rank,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale,-0.0033480434480674132,0.2553805215966706,0.36748688387833117,0.5694444444444444
+rank,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_2d_rendered_images + cnn_2d_residual_images,-0.0065602949628499885,0.2073657856738923,0.25139697644126957,0.5763888888888888
+rank,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.010409665997435067,0.35862362387100444,0.6920928167065197,0.5694444444444444
+rank,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.004950968540673384,0.17975457809039766,0.1890521328369088,0.5763888888888888
+rank,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.004269187189920119,0.3149741221788464,0.5361129091547936,0.5833333333333334
+rank,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_2d_residual_images,-0.0021576443871142055,0.11143601584185152,0.04184769282254286,0.5555555555555556
+rank,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.016914904522865218,0.3312312290229906,0.6149506252620731,0.5486111111111112
+rank,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.012140265749497826,0.3432921357320747,0.6474123623176948,0.5833333333333334
+rank,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,-0.0007850092854345224,0.14632618422080315,0.11221343735187328,0.5555555555555556
+rank,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.005711771709222909,0.2074295515301637,0.2533734556810392,0.5555555555555556
+rank,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.004344869470555676,0.14895483045444413,0.12000250599439277,0.5416666666666666
+rank,4,logistic_cumulative_scale + cnn_1d_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,-0.0012460085071721004,0.2180891513180808,0.2797131660938317,0.5625
+rank,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.014265242038023367,0.3731612983176489,0.7305755885606868,0.5694444444444444
+rank,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.005678905807322717,0.22701879771183117,0.3011745053189978,0.5833333333333334
+rank,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.003968218375431733,0.3059407014756815,0.5101270746048523,0.5694444444444444
+rank,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.0026650556147054805,0.1435903524858491,0.108673791208866,0.5694444444444444
+rank,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.01599318642066181,0.31885100433312574,0.5704152759661667,0.5555555555555556
+rank,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.005256473178640217,0.22890523514297836,0.3089727220543743,0.5555555555555556
+rank,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_2d_residual_images,-0.003043249927997032,0.16749796366568273,0.1654034553771504,0.5625
+rank,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.005548676311232377,0.2646541802950213,0.41005838038218134,0.5625
+rank,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_2d_residual_images,-0.002577426345225348,0.2068033401187332,0.2510158136986842,0.5763888888888888
+rank,4,logistic_cumulative_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,-0.003196886099532191,0.2610563288375712,0.38950104825299925,0.5902777777777778
+rank,4,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.024378795291124893,0.25353419999681426,0.3759763590838554,0.5555555555555556
+rank,4,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.01950612533060915,0.28823156067073724,0.4737414719659516,0.5833333333333334
+rank,4,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.00742253552349358,0.2676142591164011,0.4196887249831689,0.5763888888888888
+rank,4,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.01583373610371612,0.2337679966548091,0.31967472775688566,0.5833333333333334
+rank,4,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.00904087587246543,0.20682026169238493,0.2534477247975042,0.5833333333333334
+rank,4,logistic_cumulative_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.007760536185819836,0.1970670346844975,0.23057350490920459,0.5763888888888888
+rank,4,logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.019684048541180083,0.24650256169537296,0.35397028620741167,0.5833333333333334
+rank,4,logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.011350968438811532,0.2351562490655131,0.32994714028323235,0.5625
+rank,4,logistic_cumulative_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.00768733011385965,0.19860159347796005,0.23812899862074177,0.5694444444444444
+rank,4,logistic_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.0043288782400467294,0.18259572363128976,0.19572706751789037,0.5625
+rank,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale,0.01852224390431323,0.1778878354594852,0.17402007544599596,0.5625
+rank,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale,0.01755931245599237,0.26976150929372705,0.3980614358428365,0.5486111111111112
+rank,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale,0.012380834073779106,0.2577748435586039,0.36566794995185137,0.5833333333333334
+rank,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_2d_residual_images,0.014897472595805417,0.24085893123388183,0.3234484012760539,0.5555555555555556
+rank,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.024854009117594444,0.19954450494048664,0.22480460626863663,0.5416666666666666
+rank,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.015014805228195455,0.25695958914810485,0.3626614714641425,0.5763888888888888
+rank,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.0071455877858423176,0.16552425058532774,0.14684883861321163,0.5347222222222222
+rank,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.018107227036456175,0.2975671417428931,0.47461477757805826,0.5625
+rank,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.016712896612053024,0.1309516379586902,0.07359056133273612,0.5625
+rank,4,cnn_1d_image_scale + cnn_2d_rendered_images + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.008745799826897539,0.18456484690961775,0.18849942700463695,0.5625
+rank,4,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.019845190654760314,0.23229380351048928,0.3088001858002394,0.5416666666666666
+rank,4,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.015156228462960239,0.2547221606621182,0.3615880637586226,0.5555555555555556
+rank,4,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.015563977082263728,0.2521076626274707,0.3564014386271075,0.5625
+rank,4,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.017794707984960766,0.25558292098390323,0.3639366970688036,0.5833333333333334
+rank,4,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.014778963035469382,0.19126616472077143,0.20620598762481257,0.5555555555555556
+rank,4,cnn_1d_image_scale + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.010345960421074402,0.177477090213294,0.17324215931359577,0.5555555555555556
+rank,4,cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.017753679573466078,0.16924489951930388,0.15495762293013327,0.5416666666666666
+rank,4,cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.017684036172197347,0.15258273705906156,0.11864184040404013,0.5277777777777778
+rank,4,cnn_1d_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.008853875886920853,0.10847876698238373,0.021561122074359007,0.5486111111111112
+rank,4,cnn_1d_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.01441046483430923,0.19337965047344244,0.21185902566323067,0.5694444444444444
+rank,4,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale,0.02534358575171492,0.2546277892373872,0.36390423310150166,0.5347222222222222
+rank,4,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale,0.02136859582494319,0.2922933883734693,0.46635422548635175,0.5902777777777778
+rank,4,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_images,0.011997979602423197,0.22210755999824427,0.2766788565059075,0.5416666666666666
+rank,4,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.023639570503224544,0.3946181183385493,0.7687528717727026,0.5763888888888888
+rank,4,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.021610990077466554,0.2487519083962663,0.34183978460005093,0.5833333333333334
+rank,4,cnn_2d_rendered_images + cnn_1d_attention_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.01692548307351593,0.24865814987369605,0.34106091674674266,0.5763888888888888
+rank,4,cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.0252820171529698,0.2965022792994222,0.4842203066699857,0.5555555555555556
+rank,4,cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.019788801304597026,0.27862328939553205,0.42861737554951773,0.5486111111111112
+rank,4,cnn_2d_rendered_images + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.004068897677834734,0.26474434644806755,0.3911560381685151,0.5763888888888888
+rank,4,cnn_2d_rendered_images + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.019133181921221737,0.1321523936294171,0.0748721896207527,0.5555555555555556
+rank,4,cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale,0.029867524106444554,0.25010123392781775,0.3483798165491332,0.5694444444444444
+rank,4,cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_2d_residual_images,0.029356689704054785,0.21752522079080466,0.2685690650181345,0.5416666666666666
+rank,4,cnn_1d_attention_image_scale + cnn_1d_cumulative_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.018023333202309342,0.3537237986465058,0.6554478980586744,0.5833333333333334
+rank,4,cnn_1d_attention_image_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.023831464459669358,0.2713322733464246,0.40579037553107566,0.5694444444444444
+rank,4,cnn_1d_cumulative_scale + cnn_1d_dilated_image_scale + cnn_1d_multiscale_image_scale + cnn_2d_residual_images,0.025770545546037797,0.13691615975950525,0.08324623441199663,0.5416666666666666
