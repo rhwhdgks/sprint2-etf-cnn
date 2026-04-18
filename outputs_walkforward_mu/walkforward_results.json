@@ -1,0 +1,121 @@
+{
+  "config": {
+    "data_path": "etfdata.csv",
+    "output_dir": "outputs_walkforward_mu",
+    "lookback": 60,
+    "horizon": 20,
+    "label_mode": "regression",
+    "target_name": "future_return",
+    "selected_assets": [],
+    "enabled_models": [
+      "logistic_cumulative_scale",
+      "logistic_image_scale",
+      "cnn_1d_image_scale",
+      "cnn_1d_attention_image_scale"
+    ],
+    "include_moving_average": true,
+    "include_volume": true,
+    "ma_window": null,
+    "image_height": 64,
+    "train_frac": 0.7,
+    "val_frac": 0.15,
+    "top_k": 2,
+    "seed": 42,
+    "logistic_max_iter": 2000,
+    "cnn_epochs": 5,
+    "cnn_repeats": 1,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "patience": 2,
+    "device": "cpu",
+    "sample_preview_count": 0,
+    "wf_min_train_days": 500,
+    "wf_val_days": 60,
+    "wf_test_days": 120
+  },
+  "prep_summary": {
+    "lookback": 60,
+    "horizon": 20,
+    "label_mode": "regression",
+    "target_name": "future_return",
+    "canonical_target_name": "future_return",
+    "signal_role": "expected_return",
+    "target_description": "Predicted future return over the forecast horizon.",
+    "include_moving_average": true,
+    "include_volume": true,
+    "ma_window": 60,
+    "n_samples": 24101,
+    "sequence_shape": [
+      60,
+      6
+    ],
+    "chart_image_shape": [
+      64,
+      180
+    ],
+    "positive_rate": NaN,
+    "target_mean": 0.0030535372463477554,
+    "target_std": 0.04332760439699087,
+    "target_min": -0.45925363023782906,
+    "target_max": 0.3017948835324018
+  },
+  "comparison": [
+    {
+      "rmse": 0.04583497932995585,
+      "mae": 0.030139559440080923,
+      "target_rank_correlation": 0.03924851190476191,
+      "future_return_rank_correlation": 0.03924851190476191,
+      "top_k_cumulative_return": 0.6569180682499118,
+      "top_k_sharpe": 0.38500929176343796,
+      "top_k_hit_rate": 0.5902777777777778,
+      "top_bottom_spread_mean": 0.003618326617550013,
+      "turnover": 0.7167832167832168,
+      "n_rebalances": 144.0,
+      "model_name": "logistic_image_scale",
+      "n_folds": 24
+    },
+    {
+      "rmse": 0.046100716106627186,
+      "mae": 0.03005569086040993,
+      "target_rank_correlation": 0.023127480158730167,
+      "future_return_rank_correlation": 0.023127480158730167,
+      "top_k_cumulative_return": 0.39175317958670086,
+      "top_k_sharpe": 0.2681053526198875,
+      "top_k_hit_rate": 0.5902777777777778,
+      "top_bottom_spread_mean": 0.0011396640703616634,
+      "turnover": 0.6013986013986014,
+      "n_rebalances": 144.0,
+      "model_name": "cnn_1d_attention_image_scale",
+      "n_folds": 24
+    },
+    {
+      "rmse": 0.04648788010903393,
+      "mae": 0.0299378895527964,
+      "target_rank_correlation": -0.007217261904761907,
+      "future_return_rank_correlation": -0.007217261904761907,
+      "top_k_cumulative_return": -0.05122835965927386,
+      "top_k_sharpe": 0.07643795194437625,
+      "top_k_hit_rate": 0.5555555555555556,
+      "top_bottom_spread_mean": -0.0006912542596254712,
+      "turnover": 0.6468531468531469,
+      "n_rebalances": 144.0,
+      "model_name": "logistic_cumulative_scale",
+      "n_folds": 24
+    },
+    {
+      "rmse": 0.045775494157482256,
+      "mae": 0.02972048790692575,
+      "target_rank_correlation": -0.001004464285714283,
+      "future_return_rank_correlation": -0.001004464285714283,
+      "top_k_cumulative_return": -0.04692768954985127,
+      "top_k_sharpe": 0.07272599856082239,
+      "top_k_hit_rate": 0.5486111111111112,
+      "top_bottom_spread_mean": -0.0017213779698228686,
+      "turnover": 0.527972027972028,
+      "n_rebalances": 144.0,
+      "model_name": "cnn_1d_image_scale",
+      "n_folds": 24
+    }
+  ]
+}

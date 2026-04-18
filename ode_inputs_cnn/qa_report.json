@@ -1,0 +1,932 @@
+{
+  "per_model": {
+    "cnn_2d_residual_images": {
+      "mu_stats_per_asset": {
+        "alternative": {
+          "mean": 0.00026056,
+          "std": 0.000857,
+          "min": -0.00214605,
+          "max": 0.00213606
+        },
+        "corp_bond_ig": {
+          "mean": -0.00019452,
+          "std": 0.00076167,
+          "min": -0.00211529,
+          "max": 0.00190075
+        },
+        "developed_equity": {
+          "mean": 0.00020036,
+          "std": 0.00072947,
+          "min": -0.00200003,
+          "max": 0.00190071
+        },
+        "emerging_equity": {
+          "mean": -0.00021615,
+          "std": 0.00072448,
+          "min": -0.00206582,
+          "max": 0.00227737
+        },
+        "korea_equity": {
+          "mean": -0.00011202,
+          "std": 0.000793,
+          "min": -0.00205243,
+          "max": 0.00214894
+        },
+        "short_treasury": {
+          "mean": 0.00012089,
+          "std": 0.00083426,
+          "min": -0.00213861,
+          "max": 0.00219754
+        },
+        "treasury_7_10y": {
+          "mean": -5.912e-05,
+          "std": 0.00075999,
+          "min": -0.00206405,
+          "max": 0.00202401
+        }
+      },
+      "sigma_condition_number": {
+        "n_usable_dates": 3521,
+        "mean": 4568.4365125181075,
+        "median": 2715.3683957420094,
+        "p95": 13140.800096262477,
+        "max": 26766.918155691972
+      },
+      "risk_stats": {
+        "per_asset": {
+          "alternative": {
+            "mean": 0.9172,
+            "std": 0.6392,
+            "min": -1.7734,
+            "max": 2.3921
+          },
+          "corp_bond_ig": {
+            "mean": -0.4943,
+            "std": 0.47,
+            "min": -1.4199,
+            "max": 1.7899
+          },
+          "developed_equity": {
+            "mean": 0.362,
+            "std": 0.6266,
+            "min": -1.777,
+            "max": 2.3243
+          },
+          "emerging_equity": {
+            "mean": 0.705,
+            "std": 0.6039,
+            "min": -2.2489,
+            "max": 2.1721
+          },
+          "korea_equity": {
+            "mean": 0.6361,
+            "std": 0.7441,
+            "min": -2.3508,
+            "max": 2.4079
+          },
+          "short_treasury": {
+            "mean": -1.5009,
+            "std": 0.3265,
+            "min": -2.3602,
+            "max": 0.6731
+          },
+          "treasury_7_10y": {
+            "mean": -0.6252,
+            "std": 0.4379,
+            "min": -1.3211,
+            "max": 1.8142
+          }
+        },
+        "cross_sectional_std_mean": 1.080123449734643
+      },
+      "nan_coverage": {
+        "total_rows": 6617,
+        "fully_populated_rows": 0,
+        "first_fully_populated_date": null,
+        "avg_nan_per_row": 24.538612664349404,
+        "top_nan_columns": {
+          "emerging_equity_risk": 3606,
+          "alternative_risk": 3606,
+          "korea_equity_risk": 3606,
+          "treasury_7_10y_risk": 3606,
+          "short_treasury_risk": 3606
+        }
+      }
+    },
+    "cnn_2d_rendered_images": {
+      "mu_stats_per_asset": {
+        "alternative": {
+          "mean": 0.00039161,
+          "std": 0.00079248,
+          "min": -0.00187895,
+          "max": 0.00202964
+        },
+        "corp_bond_ig": {
+          "mean": -0.00029589,
+          "std": 0.00074414,
+          "min": -0.001921,
+          "max": 0.00187434
+        },
+        "developed_equity": {
+          "mean": 0.00016174,
+          "std": 0.00073703,
+          "min": -0.00197736,
+          "max": 0.00200159
+        },
+        "emerging_equity": {
+          "mean": -0.00026972,
+          "std": 0.00065368,
+          "min": -0.00171693,
+          "max": 0.00199396
+        },
+        "korea_equity": {
+          "mean": -0.00012531,
+          "std": 0.00077183,
+          "min": -0.00201913,
+          "max": 0.00203974
+        },
+        "short_treasury": {
+          "mean": 0.00016548,
+          "std": 0.00086695,
+          "min": -0.00199419,
+          "max": 0.00219742
+        },
+        "treasury_7_10y": {
+          "mean": -2.792e-05,
+          "std": 0.00078352,
+          "min": -0.00186871,
+          "max": 0.00198997
+        }
+      },
+      "sigma_condition_number": {
+        "n_usable_dates": 3521,
+        "mean": 4568.4365125181075,
+        "median": 2715.3683957420094,
+        "p95": 13140.800096262477,
+        "max": 26766.918155691972
+      },
+      "risk_stats": {
+        "per_asset": {
+          "alternative": {
+            "mean": 0.9172,
+            "std": 0.6392,
+            "min": -1.7734,
+            "max": 2.3921
+          },
+          "corp_bond_ig": {
+            "mean": -0.4943,
+            "std": 0.47,
+            "min": -1.4199,
+            "max": 1.7899
+          },
+          "developed_equity": {
+            "mean": 0.362,
+            "std": 0.6266,
+            "min": -1.777,
+            "max": 2.3243
+          },
+          "emerging_equity": {
+            "mean": 0.705,
+            "std": 0.6039,
+            "min": -2.2489,
+            "max": 2.1721
+          },
+          "korea_equity": {
+            "mean": 0.6361,
+            "std": 0.7441,
+            "min": -2.3508,
+            "max": 2.4079
+          },
+          "short_treasury": {
+            "mean": -1.5009,
+            "std": 0.3265,
+            "min": -2.3602,
+            "max": 0.6731
+          },
+          "treasury_7_10y": {
+            "mean": -0.6252,
+            "std": 0.4379,
+            "min": -1.3211,
+            "max": 1.8142
+          }
+        },
+        "cross_sectional_std_mean": 1.080123449734643
+      },
+      "nan_coverage": {
+        "total_rows": 6617,
+        "fully_populated_rows": 0,
+        "first_fully_populated_date": null,
+        "avg_nan_per_row": 24.538612664349404,
+        "top_nan_columns": {
+          "emerging_equity_risk": 3606,
+          "alternative_risk": 3606,
+          "korea_equity_risk": 3606,
+          "treasury_7_10y_risk": 3606,
+          "short_treasury_risk": 3606
+        }
+      }
+    },
+    "cnn_1d_image_scale": {
+      "mu_stats_per_asset": {
+        "alternative": {
+          "mean": 0.00040809,
+          "std": 0.00084031,
+          "min": -0.00212643,
+          "max": 0.00213939
+        },
+        "corp_bond_ig": {
+          "mean": -0.00018585,
+          "std": 0.00075308,
+          "min": -0.00201197,
+          "max": 0.00186179
+        },
+        "developed_equity": {
+          "mean": 0.0001626,
+          "std": 0.00069719,
+          "min": -0.00168155,
+          "max": 0.0019726
+        },
+        "emerging_equity": {
+          "mean": -0.00021894,
+          "std": 0.00065917,
+          "min": -0.00198043,
+          "max": 0.00171844
+        },
+        "korea_equity": {
+          "mean": -0.00016196,
+          "std": 0.00076384,
+          "min": -0.00202009,
+          "max": 0.00208944
+        },
+        "short_treasury": {
+          "mean": 7.572e-05,
+          "std": 0.00087304,
+          "min": -0.00207573,
+          "max": 0.00205802
+        },
+        "treasury_7_10y": {
+          "mean": -7.968e-05,
+          "std": 0.00080249,
+          "min": -0.00190993,
+          "max": 0.00204623
+        }
+      },
+      "sigma_condition_number": {
+        "n_usable_dates": 3521,
+        "mean": 4568.4365125181075,
+        "median": 2715.3683957420094,
+        "p95": 13140.800096262477,
+        "max": 26766.918155691972
+      },
+      "risk_stats": {
+        "per_asset": {
+          "alternative": {
+            "mean": 0.9172,
+            "std": 0.6392,
+            "min": -1.7734,
+            "max": 2.3921
+          },
+          "corp_bond_ig": {
+            "mean": -0.4943,
+            "std": 0.47,
+            "min": -1.4199,
+            "max": 1.7899
+          },
+          "developed_equity": {
+            "mean": 0.362,
+            "std": 0.6266,
+            "min": -1.777,
+            "max": 2.3243
+          },
+          "emerging_equity": {
+            "mean": 0.705,
+            "std": 0.6039,
+            "min": -2.2489,
+            "max": 2.1721
+          },
+          "korea_equity": {
+            "mean": 0.6361,
+            "std": 0.7441,
+            "min": -2.3508,
+            "max": 2.4079
+          },
+          "short_treasury": {
+            "mean": -1.5009,
+            "std": 0.3265,
+            "min": -2.3602,
+            "max": 0.6731
+          },
+          "treasury_7_10y": {
+            "mean": -0.6252,
+            "std": 0.4379,
+            "min": -1.3211,
+            "max": 1.8142
+          }
+        },
+        "cross_sectional_std_mean": 1.080123449734643
+      },
+      "nan_coverage": {
+        "total_rows": 6617,
+        "fully_populated_rows": 0,
+        "first_fully_populated_date": null,
+        "avg_nan_per_row": 24.538612664349404,
+        "top_nan_columns": {
+          "emerging_equity_risk": 3606,
+          "alternative_risk": 3606,
+          "korea_equity_risk": 3606,
+          "treasury_7_10y_risk": 3606,
+          "short_treasury_risk": 3606
+        }
+      }
+    },
+    "cnn_1d_dilated_image_scale": {
+      "mu_stats_per_asset": {
+        "alternative": {
+          "mean": 0.00019382,
+          "std": 0.0008048,
+          "min": -0.00218394,
+          "max": 0.00214045
+        },
+        "corp_bond_ig": {
+          "mean": -0.00013511,
+          "std": 0.00087036,
+          "min": -0.00209013,
+          "max": 0.00208666
+        },
+        "developed_equity": {
+          "mean": 4.313e-05,
+          "std": 0.0007095,
+          "min": -0.00204307,
+          "max": 0.00184638
+        },
+        "emerging_equity": {
+          "mean": -9.118e-05,
+          "std": 0.00071486,
+          "min": -0.00201332,
+          "max": 0.00206304
+        },
+        "korea_equity": {
+          "mean": -5.831e-05,
+          "std": 0.00078236,
+          "min": -0.00195475,
+          "max": 0.00213455
+        },
+        "short_treasury": {
+          "mean": 6.138e-05,
+          "std": 0.00085753,
+          "min": -0.00191481,
+          "max": 0.00208181
+        },
+        "treasury_7_10y": {
+          "mean": -1.372e-05,
+          "std": 0.00081048,
+          "min": -0.00197911,
+          "max": 0.00214199
+        }
+      },
+      "sigma_condition_number": {
+        "n_usable_dates": 3521,
+        "mean": 4568.4365125181075,
+        "median": 2715.3683957420094,
+        "p95": 13140.800096262477,
+        "max": 26766.918155691972
+      },
+      "risk_stats": {
+        "per_asset": {
+          "alternative": {
+            "mean": 0.9172,
+            "std": 0.6392,
+            "min": -1.7734,
+            "max": 2.3921
+          },
+          "corp_bond_ig": {
+            "mean": -0.4943,
+            "std": 0.47,
+            "min": -1.4199,
+            "max": 1.7899
+          },
+          "developed_equity": {
+            "mean": 0.362,
+            "std": 0.6266,
+            "min": -1.777,
+            "max": 2.3243
+          },
+          "emerging_equity": {
+            "mean": 0.705,
+            "std": 0.6039,
+            "min": -2.2489,
+            "max": 2.1721
+          },
+          "korea_equity": {
+            "mean": 0.6361,
+            "std": 0.7441,
+            "min": -2.3508,
+            "max": 2.4079
+          },
+          "short_treasury": {
+            "mean": -1.5009,
+            "std": 0.3265,
+            "min": -2.3602,
+            "max": 0.6731
+          },
+          "treasury_7_10y": {
+            "mean": -0.6252,
+            "std": 0.4379,
+            "min": -1.3211,
+            "max": 1.8142
+          }
+        },
+        "cross_sectional_std_mean": 1.080123449734643
+      },
+      "nan_coverage": {
+        "total_rows": 6617,
+        "fully_populated_rows": 0,
+        "first_fully_populated_date": null,
+        "avg_nan_per_row": 24.538612664349404,
+        "top_nan_columns": {
+          "emerging_equity_risk": 3606,
+          "alternative_risk": 3606,
+          "korea_equity_risk": 3606,
+          "treasury_7_10y_risk": 3606,
+          "short_treasury_risk": 3606
+        }
+      }
+    },
+    "cnn_1d_cumulative_scale": {
+      "mu_stats_per_asset": {
+        "alternative": {
+          "mean": 0.00049125,
+          "std": 0.00111145,
+          "min": -0.00223852,
+          "max": 0.00224162
+        },
+        "corp_bond_ig": {
+          "mean": -0.00025375,
+          "std": 0.00050052,
+          "min": -0.00192646,
+          "max": 0.00205591
+        },
+        "developed_equity": {
+          "mean": 0.00033798,
+          "std": 0.00101386,
+          "min": -0.00215133,
+          "max": 0.00220211
+        },
+        "emerging_equity": {
+          "mean": -0.00026241,
+          "std": 0.00048938,
+          "min": -0.00186299,
+          "max": 0.00196199
+        },
+        "korea_equity": {
+          "mean": -0.0001789,
+          "std": 0.00060925,
+          "min": -0.00204632,
+          "max": 0.00208185
+        },
+        "short_treasury": {
+          "mean": -4.837e-05,
+          "std": 0.00065491,
+          "min": -0.00212498,
+          "max": 0.00237464
+        },
+        "treasury_7_10y": {
+          "mean": -8.58e-05,
+          "std": 0.00064289,
+          "min": -0.00197975,
+          "max": 0.00214981
+        }
+      },
+      "sigma_condition_number": {
+        "n_usable_dates": 3521,
+        "mean": 4568.4365125181075,
+        "median": 2715.3683957420094,
+        "p95": 13140.800096262477,
+        "max": 26766.918155691972
+      },
+      "risk_stats": {
+        "per_asset": {
+          "alternative": {
+            "mean": 0.9172,
+            "std": 0.6392,
+            "min": -1.7734,
+            "max": 2.3921
+          },
+          "corp_bond_ig": {
+            "mean": -0.4943,
+            "std": 0.47,
+            "min": -1.4199,
+            "max": 1.7899
+          },
+          "developed_equity": {
+            "mean": 0.362,
+            "std": 0.6266,
+            "min": -1.777,
+            "max": 2.3243
+          },
+          "emerging_equity": {
+            "mean": 0.705,
+            "std": 0.6039,
+            "min": -2.2489,
+            "max": 2.1721
+          },
+          "korea_equity": {
+            "mean": 0.6361,
+            "std": 0.7441,
+            "min": -2.3508,
+            "max": 2.4079
+          },
+          "short_treasury": {
+            "mean": -1.5009,
+            "std": 0.3265,
+            "min": -2.3602,
+            "max": 0.6731
+          },
+          "treasury_7_10y": {
+            "mean": -0.6252,
+            "std": 0.4379,
+            "min": -1.3211,
+            "max": 1.8142
+          }
+        },
+        "cross_sectional_std_mean": 1.080123449734643
+      },
+      "nan_coverage": {
+        "total_rows": 6617,
+        "fully_populated_rows": 0,
+        "first_fully_populated_date": null,
+        "avg_nan_per_row": 24.538612664349404,
+        "top_nan_columns": {
+          "emerging_equity_risk": 3606,
+          "alternative_risk": 3606,
+          "korea_equity_risk": 3606,
+          "treasury_7_10y_risk": 3606,
+          "short_treasury_risk": 3606
+        }
+      }
+    },
+    "ensemble_top3": {
+      "mu_stats_per_asset": {
+        "alternative": {
+          "mean": 0.00029654,
+          "std": 0.00077854,
+          "min": -0.00209129,
+          "max": 0.00216859
+        },
+        "corp_bond_ig": {
+          "mean": -0.00024018,
+          "std": 0.00083086,
+          "min": -0.00214994,
+          "max": 0.00204422
+        },
+        "developed_equity": {
+          "mean": 0.00013193,
+          "std": 0.00073097,
+          "min": -0.00222816,
+          "max": 0.0017956
+        },
+        "emerging_equity": {
+          "mean": -0.00016794,
+          "std": 0.00071394,
+          "min": -0.00208384,
+          "max": 0.00200165
+        },
+        "korea_equity": {
+          "mean": -0.00012628,
+          "std": 0.00079629,
+          "min": -0.00198641,
+          "max": 0.00209953
+        },
+        "short_treasury": {
+          "mean": 9.304e-05,
+          "std": 0.00084457,
+          "min": -0.00204245,
+          "max": 0.0020853
+        },
+        "treasury_7_10y": {
+          "mean": 1.289e-05,
+          "std": 0.00077032,
+          "min": -0.00195816,
+          "max": 0.00200952
+        }
+      },
+      "sigma_condition_number": {
+        "n_usable_dates": 3521,
+        "mean": 4568.4365125181075,
+        "median": 2715.3683957420094,
+        "p95": 13140.800096262477,
+        "max": 26766.918155691972
+      },
+      "risk_stats": {
+        "per_asset": {
+          "alternative": {
+            "mean": 0.9172,
+            "std": 0.6392,
+            "min": -1.7734,
+            "max": 2.3921
+          },
+          "corp_bond_ig": {
+            "mean": -0.4943,
+            "std": 0.47,
+            "min": -1.4199,
+            "max": 1.7899
+          },
+          "developed_equity": {
+            "mean": 0.362,
+            "std": 0.6266,
+            "min": -1.777,
+            "max": 2.3243
+          },
+          "emerging_equity": {
+            "mean": 0.705,
+            "std": 0.6039,
+            "min": -2.2489,
+            "max": 2.1721
+          },
+          "korea_equity": {
+            "mean": 0.6361,
+            "std": 0.7441,
+            "min": -2.3508,
+            "max": 2.4079
+          },
+          "short_treasury": {
+            "mean": -1.5009,
+            "std": 0.3265,
+            "min": -2.3602,
+            "max": 0.6731
+          },
+          "treasury_7_10y": {
+            "mean": -0.6252,
+            "std": 0.4379,
+            "min": -1.3211,
+            "max": 1.8142
+          }
+        },
+        "cross_sectional_std_mean": 1.080123449734643
+      },
+      "nan_coverage": {
+        "total_rows": 6617,
+        "fully_populated_rows": 0,
+        "first_fully_populated_date": null,
+        "avg_nan_per_row": 24.538612664349404,
+        "top_nan_columns": {
+          "emerging_equity_risk": 3606,
+          "alternative_risk": 3606,
+          "korea_equity_risk": 3606,
+          "treasury_7_10y_risk": 3606,
+          "short_treasury_risk": 3606
+        }
+      }
+    },
+    "cnn_1d_attention_image_scale": {
+      "mu_stats_per_asset": {
+        "alternative": {
+          "mean": 0.00027804,
+          "std": 0.00077886,
+          "min": -0.00201945,
+          "max": 0.00210298
+        },
+        "corp_bond_ig": {
+          "mean": -0.00023845,
+          "std": 0.00081813,
+          "min": -0.00218058,
+          "max": 0.00211356
+        },
+        "developed_equity": {
+          "mean": 7.238e-05,
+          "std": 0.00069006,
+          "min": -0.00191138,
+          "max": 0.00172544
+        },
+        "emerging_equity": {
+          "mean": -0.00015532,
+          "std": 0.00075344,
+          "min": -0.00208085,
+          "max": 0.00195479
+        },
+        "korea_equity": {
+          "mean": -0.00011956,
+          "std": 0.00083085,
+          "min": -0.00191112,
+          "max": 0.00206624
+        },
+        "short_treasury": {
+          "mean": 0.00012377,
+          "std": 0.00085609,
+          "min": -0.00196355,
+          "max": 0.00204989
+        },
+        "treasury_7_10y": {
+          "mean": 3.914e-05,
+          "std": 0.00074805,
+          "min": -0.00187642,
+          "max": 0.00204468
+        }
+      },
+      "sigma_condition_number": {
+        "n_usable_dates": 3521,
+        "mean": 4568.4365125181075,
+        "median": 2715.3683957420094,
+        "p95": 13140.800096262477,
+        "max": 26766.918155691972
+      },
+      "risk_stats": {
+        "per_asset": {
+          "alternative": {
+            "mean": 0.9172,
+            "std": 0.6392,
+            "min": -1.7734,
+            "max": 2.3921
+          },
+          "corp_bond_ig": {
+            "mean": -0.4943,
+            "std": 0.47,
+            "min": -1.4199,
+            "max": 1.7899
+          },
+          "developed_equity": {
+            "mean": 0.362,
+            "std": 0.6266,
+            "min": -1.777,
+            "max": 2.3243
+          },
+          "emerging_equity": {
+            "mean": 0.705,
+            "std": 0.6039,
+            "min": -2.2489,
+            "max": 2.1721
+          },
+          "korea_equity": {
+            "mean": 0.6361,
+            "std": 0.7441,
+            "min": -2.3508,
+            "max": 2.4079
+          },
+          "short_treasury": {
+            "mean": -1.5009,
+            "std": 0.3265,
+            "min": -2.3602,
+            "max": 0.6731
+          },
+          "treasury_7_10y": {
+            "mean": -0.6252,
+            "std": 0.4379,
+            "min": -1.3211,
+            "max": 1.8142
+          }
+        },
+        "cross_sectional_std_mean": 1.080123449734643
+      },
+      "nan_coverage": {
+        "total_rows": 6617,
+        "fully_populated_rows": 0,
+        "first_fully_populated_date": null,
+        "avg_nan_per_row": 24.538612664349404,
+        "top_nan_columns": {
+          "emerging_equity_risk": 3606,
+          "alternative_risk": 3606,
+          "korea_equity_risk": 3606,
+          "treasury_7_10y_risk": 3606,
+          "short_treasury_risk": 3606
+        }
+      }
+    },
+    "cnn_1d_multiscale_image_scale": {
+      "mu_stats_per_asset": {
+        "alternative": {
+          "mean": 0.0004645,
+          "std": 0.00080234,
+          "min": -0.00200161,
+          "max": 0.00215597
+        },
+        "corp_bond_ig": {
+          "mean": -0.00027711,
+          "std": 0.00076141,
+          "min": -0.00191104,
+          "max": 0.00208577
+        },
+        "developed_equity": {
+          "mean": 0.00026057,
+          "std": 0.00064822,
+          "min": -0.00198758,
+          "max": 0.00180952
+        },
+        "emerging_equity": {
+          "mean": -0.00025938,
+          "std": 0.00068916,
+          "min": -0.00203016,
+          "max": 0.00202525
+        },
+        "korea_equity": {
+          "mean": -0.00018759,
+          "std": 0.00078937,
+          "min": -0.0019698,
+          "max": 0.00207667
+        },
+        "short_treasury": {
+          "mean": 2.211e-05,
+          "std": 0.00082321,
+          "min": -0.00191708,
+          "max": 0.0020717
+        },
+        "treasury_7_10y": {
+          "mean": -2.31e-05,
+          "std": 0.00078347,
+          "min": -0.00187487,
+          "max": 0.00201866
+        }
+      },
+      "sigma_condition_number": {
+        "n_usable_dates": 3521,
+        "mean": 4568.4365125181075,
+        "median": 2715.3683957420094,
+        "p95": 13140.800096262477,
+        "max": 26766.918155691972
+      },
+      "risk_stats": {
+        "per_asset": {
+          "alternative": {
+            "mean": 0.9172,
+            "std": 0.6392,
+            "min": -1.7734,
+            "max": 2.3921
+          },
+          "corp_bond_ig": {
+            "mean": -0.4943,
+            "std": 0.47,
+            "min": -1.4199,
+            "max": 1.7899
+          },
+          "developed_equity": {
+            "mean": 0.362,
+            "std": 0.6266,
+            "min": -1.777,
+            "max": 2.3243
+          },
+          "emerging_equity": {
+            "mean": 0.705,
+            "std": 0.6039,
+            "min": -2.2489,
+            "max": 2.1721
+          },
+          "korea_equity": {
+            "mean": 0.6361,
+            "std": 0.7441,
+            "min": -2.3508,
+            "max": 2.4079
+          },
+          "short_treasury": {
+            "mean": -1.5009,
+            "std": 0.3265,
+            "min": -2.3602,
+            "max": 0.6731
+          },
+          "treasury_7_10y": {
+            "mean": -0.6252,
+            "std": 0.4379,
+            "min": -1.3211,
+            "max": 1.8142
+          }
+        },
+        "cross_sectional_std_mean": 1.080123449734643
+      },
+      "nan_coverage": {
+        "total_rows": 6617,
+        "fully_populated_rows": 0,
+        "first_fully_populated_date": null,
+        "avg_nan_per_row": 24.538612664349404,
+        "top_nan_columns": {
+          "emerging_equity_risk": 3606,
+          "alternative_risk": 3606,
+          "korea_equity_risk": 3606,
+          "treasury_7_10y_risk": 3606,
+          "short_treasury_risk": 3606
+        }
+      }
+    }
+  },
+  "ensemble_agreement_top3": {
+    "pairwise_corr": {
+      "cnn_1d_dilated_image_scale": {
+        "cnn_1d_dilated_image_scale": 1.0,
+        "cnn_1d_cumulative_scale": 0.1,
+        "cnn_1d_attention_image_scale": 0.6037
+      },
+      "cnn_1d_cumulative_scale": {
+        "cnn_1d_dilated_image_scale": 0.1,
+        "cnn_1d_cumulative_scale": 1.0,
+        "cnn_1d_attention_image_scale": 0.1205
+      },
+      "cnn_1d_attention_image_scale": {
+        "cnn_1d_dilated_image_scale": 0.6037,
+        "cnn_1d_cumulative_scale": 0.1205,
+        "cnn_1d_attention_image_scale": 1.0
+      }
+    },
+    "members": [
+      "cnn_1d_dilated_image_scale",
+      "cnn_1d_cumulative_scale",
+      "cnn_1d_attention_image_scale"
+    ]
+  }
+}

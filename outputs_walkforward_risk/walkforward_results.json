@@ -1,0 +1,76 @@
+{
+  "config": {
+    "data_path": "etfdata.csv",
+    "output_dir": "outputs_walkforward_risk",
+    "lookback": 20,
+    "horizon": 20,
+    "label_mode": "regression",
+    "target_name": "downside_like",
+    "selected_assets": [],
+    "enabled_models": [
+      "logistic_cumulative_scale"
+    ],
+    "include_moving_average": true,
+    "include_volume": true,
+    "ma_window": null,
+    "image_height": 64,
+    "train_frac": 0.7,
+    "val_frac": 0.15,
+    "top_k": 2,
+    "seed": 42,
+    "logistic_max_iter": 2000,
+    "cnn_epochs": 8,
+    "cnn_repeats": 1,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "patience": 2,
+    "device": "cpu",
+    "sample_preview_count": 0,
+    "wf_min_train_days": 500,
+    "wf_val_days": 60,
+    "wf_test_days": 120
+  },
+  "prep_summary": {
+    "lookback": 20,
+    "horizon": 20,
+    "label_mode": "regression",
+    "target_name": "downside_like",
+    "canonical_target_name": "future_downside",
+    "signal_role": "downside_risk",
+    "target_description": "Predicted downside risk over the forecast horizon; lower is better for selection.",
+    "include_moving_average": true,
+    "include_volume": true,
+    "ma_window": 20,
+    "n_samples": 24661,
+    "sequence_shape": [
+      20,
+      6
+    ],
+    "chart_image_shape": [
+      64,
+      60
+    ],
+    "positive_rate": NaN,
+    "target_mean": 5.3878822652455923e-05,
+    "target_std": 0.00015678985281187676,
+    "target_min": 0.0,
+    "target_max": 0.0031870670700665134
+  },
+  "comparison": [
+    {
+      "rmse": 0.00016308184899539743,
+      "mae": 4.6682935364387166e-05,
+      "target_rank_correlation": 0.7413690476190479,
+      "future_return_rank_correlation": -0.07008928571428573,
+      "top_k_cumulative_return": 0.010493679321435412,
+      "top_k_sharpe": 0.04647933818052504,
+      "top_k_hit_rate": 0.5416666666666666,
+      "top_bottom_spread_mean": -0.006720443131626332,
+      "turnover": 0.3146853146853147,
+      "n_rebalances": 144.0,
+      "model_name": "logistic_cumulative_scale",
+      "n_folds": 24
+    }
+  ]
+}
