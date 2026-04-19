@@ -37,6 +37,7 @@ SOURCES = {
     "cnn_1d_dilated_image_scale":   "outputs_walkforward_1dcnn_extra",
     "cnn_1d_multiscale_image_scale":"outputs_walkforward_1dcnn_extra",
     "cnn_2d_residual_images":       "outputs_walkforward_2d_residual",
+    "cnn_2d_residual_small":        "outputs_walkforward_2d_phase2",
 }
 
 HORIZON = 20

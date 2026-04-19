@@ -24,6 +24,16 @@ korea_equity     -0.000125  0.000772 -0.002019  0.002040
 short_treasury    0.000165  0.000867 -0.001994  0.002197
 treasury_7_10y   -0.000028  0.000784 -0.001869  0.001990
 
+### ensemble_best
+                      mean       std       min       max
+alternative       0.000476  0.000773 -0.001934  0.002120
+corp_bond_ig     -0.000298  0.000741 -0.002119  0.001987
+developed_equity  0.000310  0.000766 -0.002023  0.002057
+emerging_equity  -0.000353  0.000679 -0.002065  0.001719
+korea_equity     -0.000203  0.000719 -0.002068  0.001797
+short_treasury    0.000120  0.000771 -0.001976  0.002049
+treasury_7_10y   -0.000052  0.000773 -0.002097  0.001904
+
 ### cnn_1d_image_scale
                       mean       std       min       max
 alternative       0.000408  0.000840 -0.002126  0.002139
@@ -56,13 +66,13 @@ treasury_7_10y   -0.000086  0.000643 -0.001980  0.002150
 
 ### ensemble_top3
                       mean       std       min       max
-alternative       0.000297  0.000779 -0.002091  0.002169
-corp_bond_ig     -0.000240  0.000831 -0.002150  0.002044
-developed_equity  0.000132  0.000731 -0.002228  0.001796
-emerging_equity  -0.000168  0.000714 -0.002084  0.002002
-korea_equity     -0.000126  0.000796 -0.001986  0.002100
-short_treasury    0.000093  0.000845 -0.002042  0.002085
-treasury_7_10y    0.000013  0.000770 -0.001958  0.002010
+alternative       0.000325  0.000833 -0.002174  0.002195
+corp_bond_ig     -0.000182  0.000814 -0.002132  0.002009
+developed_equity  0.000215  0.000736 -0.002121  0.001927
+emerging_equity  -0.000213  0.000700 -0.002093  0.002072
+korea_equity     -0.000156  0.000756 -0.002087  0.001995
+short_treasury    0.000067  0.000829 -0.002019  0.002059
+treasury_7_10y   -0.000055  0.000766 -0.002037  0.002012
 
 ### cnn_1d_attention_image_scale
                       mean       std       min       max
@@ -84,6 +94,16 @@ korea_equity     -0.000188  0.000789 -0.001970  0.002077
 short_treasury    0.000022  0.000823 -0.001917  0.002072
 treasury_7_10y   -0.000023  0.000783 -0.001875  0.002019
 
+### cnn_2d_residual_small
+                      mean       std       min       max
+alternative       0.000284  0.000848 -0.002204  0.002176
+corp_bond_ig     -0.000121  0.000805 -0.002189  0.002074
+developed_equity  0.000200  0.000705 -0.002147  0.002110
+emerging_equity  -0.000224  0.000734 -0.002122  0.002055
+korea_equity     -0.000199  0.000755 -0.002159  0.002019
+short_treasury    0.000087  0.000835 -0.002069  0.002103
+treasury_7_10y   -0.000026  0.000771 -0.002027  0.002081
+
 ## 2. Σ(t) 조건수 (full 7×7 covariance, per-date)
 
 조건수 중간값이 너무 크면 ODE 최적화에서 수치 불안정 가능성. 일반적으로 < 10^3 권장.
@@ -91,12 +111,14 @@ treasury_7_10y   -0.000023  0.000783 -0.001875  0.002019
                         model  n_usable_dates        mean      median          p95          max
        cnn_2d_residual_images            3521 4568.436513 2715.368396 13140.800096 26766.918156
        cnn_2d_rendered_images            3521 4568.436513 2715.368396 13140.800096 26766.918156
+                ensemble_best            3521 4568.436513 2715.368396 13140.800096 26766.918156
            cnn_1d_image_scale            3521 4568.436513 2715.368396 13140.800096 26766.918156
    cnn_1d_dilated_image_scale            3521 4568.436513 2715.368396 13140.800096 26766.918156
       cnn_1d_cumulative_scale            3521 4568.436513 2715.368396 13140.800096 26766.918156
                 ensemble_top3            3521 4568.436513 2715.368396 13140.800096 26766.918156
  cnn_1d_attention_image_scale            3521 4568.436513 2715.368396 13140.800096 26766.918156
 cnn_1d_multiscale_image_scale            3521 4568.436513 2715.368396 13140.800096 26766.918156
+        cnn_2d_residual_small            3521 4568.436513 2715.368396 13140.800096 26766.918156
 
 ## 3. risk_score 분포
 
@@ -104,34 +126,37 @@ cnn_1d_multiscale_image_scale            3521 4568.436513 2715.368396 13140.8000
 
 - **cnn_2d_residual_images**: 날짜별 cross-sectional std 평균 = 1.0801
 - **cnn_2d_rendered_images**: 날짜별 cross-sectional std 평균 = 1.0801
+- **ensemble_best**: 날짜별 cross-sectional std 평균 = 1.0801
 - **cnn_1d_image_scale**: 날짜별 cross-sectional std 평균 = 1.0801
 - **cnn_1d_dilated_image_scale**: 날짜별 cross-sectional std 평균 = 1.0801
 - **cnn_1d_cumulative_scale**: 날짜별 cross-sectional std 평균 = 1.0801
 - **ensemble_top3**: 날짜별 cross-sectional std 평균 = 1.0801
 - **cnn_1d_attention_image_scale**: 날짜별 cross-sectional std 평균 = 1.0801
 - **cnn_1d_multiscale_image_scale**: 날짜별 cross-sectional std 평균 = 1.0801
+- **cnn_2d_residual_small**: 날짜별 cross-sectional std 평균 = 1.0801
 
 ## 4. ode_bundle NaN 커버리지
 
                         model  total_rows  full_rows first_full_date
        cnn_2d_residual_images        6617          0            None
        cnn_2d_rendered_images        6617          0            None
+                ensemble_best        6617          0            None
            cnn_1d_image_scale        6617          0            None
    cnn_1d_dilated_image_scale        6617          0            None
       cnn_1d_cumulative_scale        6617          0            None
                 ensemble_top3        6617          0            None
  cnn_1d_attention_image_scale        6617          0            None
 cnn_1d_multiscale_image_scale        6617          0            None
+        cnn_2d_residual_small        6617          0            None
 
 ## 5. 앙상블 구성원 간 μ 상관
 
-앙상블 멤버 (3개, OOS rank corr 상위): cnn_1d_dilated_image_scale, cnn_1d_cumulative_scale, cnn_1d_attention_image_scale
+앙상블 멤버 (3개, OOS rank corr 상위): logistic_image_scale, cnn_1d_cumulative_scale, cnn_2d_residual_small
 
 멤버 간 mu_hat_daily Pearson 상관 매트릭스.
 상관이 지나치게 높으면 앙상블 효과 미미, 낮으면 diversification 효과 큼.
 
-                              cnn_1d_dilated_image_scale  cnn_1d_cumulative_scale  cnn_1d_attention_image_scale
-cnn_1d_dilated_image_scale                        1.0000                   0.1000                        0.6037
-cnn_1d_cumulative_scale                           0.1000                   1.0000                        0.1205
-cnn_1d_attention_image_scale                      0.6037                   0.1205                        1.0000
+                         cnn_1d_cumulative_scale  cnn_2d_residual_small
+cnn_1d_cumulative_scale                   1.0000                 0.1052
+cnn_2d_residual_small                     0.1052                 1.0000
 

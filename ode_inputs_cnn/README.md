@@ -13,7 +13,8 @@ ode_inputs_cnn/
 ├── qa_report.md / .json      μ/Σ/risk sanity 점검
 ├── returns_daily.csv         일별 로그수익률 (wide, N dates × 7 assets)
 ├── prices_daily.csv          일별 close price (wide, 동일 그리드)
-├── ensemble_top3/          앙상블 (top-3 CNN signal 평균)
+├── ensemble_best/          ★ 권장 default — mixed family 앙상블 (logistic + 1D CNN + 2D CNN, cross-sectional rank 평균)
+├── ensemble_top3/          레거시 CNN-only 앙상블 (raw-mean)
 │   ├── mu_daily.csv
 │   ├── risk_daily.csv
 │   ├── ode_bundle.csv
@@ -95,8 +96,8 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 
-BUNDLE_DIR = Path("ode_inputs_cnn/ensemble_top3")  # 최고 단일 모델
-# 또는 Path("ode_inputs_cnn/ensemble_top3")  # 앙상블
+BUNDLE_DIR = Path("ode_inputs_cnn/ensemble_best")  # ★ 권장 default (rank 0.061 / Sharpe 0.643)
+# 또는 Path("ode_inputs_cnn/cnn_2d_residual_small")  # 단일 CNN 중 최고 (rank 0.043)
 
 bundle = pd.read_csv(BUNDLE_DIR / "ode_bundle.csv", parse_dates=["date"])
 assets = ['alternative', 'corp_bond_ig', 'developed_equity', 'emerging_equity', 'korea_equity', 'short_treasury', 'treasury_7_10y']
@@ -126,9 +127,10 @@ returns = pd.read_csv("ode_inputs_cnn/returns_daily.csv", parse_dates=["date"])
 
 [comparison.md](comparison.md) 참조.
 
-- **추천 기본값**: `ensemble_top3` — 앙상블 (top-3 CNN 평균)
-- **1순위 단일 CNN**: `cnn_1d_dilated_image_scale`
-- **대안 앙상블**: `ensemble_top3` — 개별 모델의 noise 완화, 로버스트하지만 보수적
+- **★ 추천 기본값**: `ensemble_best` — OOS rank corr 0.061 / Sharpe 0.643 (두 metric 동시 1위)
+  - 구성: `logistic_image_scale` + `cnn_1d_cumulative_scale` + `cnn_2d_residual_small` (cross-sectional percentile rank 평균)
+- **단일 CNN 중 최고**: `cnn_2d_residual_small` — rank 0.043. Ensemble 없이 단일 CNN으로 가야 할 때
+- **대안 CNN-only 앙상블**: `ensemble_top3` (raw-mean) — logistic 빼고 CNN만 쓰고 싶을 때
 - **실험 용도**: 그 외 CNN 번들들은 sensitivity/ablation 시 비교용
 
 ## 6. 보증

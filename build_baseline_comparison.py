@@ -21,6 +21,7 @@ WF_DIRS = [
     "outputs_walkforward_mu",
     "outputs_walkforward_1dcnn_extra",
     "outputs_walkforward_2d_residual",
+    "outputs_walkforward_2d_phase2",
 ]
 
 KEY_COLS = [
@@ -37,17 +38,17 @@ KEY_COLS = [
 ENSEMBLE_CONFIGS = {
     "ensemble_top3": {
         "members": [
+            ("cnn_2d_residual_small", "outputs_walkforward_2d_phase2"),
             ("cnn_1d_dilated_image_scale", "outputs_walkforward_1dcnn_extra"),
             ("cnn_1d_cumulative_scale", "outputs_walkforward_1dcnn_extra"),
-            ("cnn_1d_attention_image_scale", "outputs_walkforward_1dcnn_extra"),
         ],
         "aggregation": "raw_mean",
     },
     "ensemble_best": {
         "members": [
             ("logistic_image_scale", "outputs_walkforward_4model"),
-            ("cnn_1d_attention_image_scale", "outputs_walkforward_1dcnn_extra"),
             ("cnn_1d_cumulative_scale", "outputs_walkforward_1dcnn_extra"),
+            ("cnn_2d_residual_small", "outputs_walkforward_2d_phase2"),
         ],
         "aggregation": "rank_mean",
     },

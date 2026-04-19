@@ -1,0 +1,43 @@
+{
+  "model_name": "cnn_2d_residual_small",
+  "mu_model": "cnn_2d_residual_small",
+  "risk_model": "logistic_cumulative_scale",
+  "horizon": 20,
+  "sigma_window": 60,
+  "n_assets": 7,
+  "assets": [
+    "alternative",
+    "corp_bond_ig",
+    "developed_equity",
+    "emerging_equity",
+    "korea_equity",
+    "short_treasury",
+    "treasury_7_10y"
+  ],
+  "mu_date_range": [
+    "2014-09-24",
+    "2026-04-13"
+  ],
+  "sigma_date_range": [
+    "2012-04-10",
+    "2026-04-10"
+  ],
+  "n_dates_oos": 2880,
+  "oos_rank_corr_mean": 0.04261262688625306,
+  "oos_pct_positive": 0.5208333333333334,
+  "mu_range_daily": [
+    -0.0022037464698337365,
+    0.0021757109161167545
+  ],
+  "mu_calibration": {
+    "method": "cross_sectional_zscore_x_expanding_return_std",
+    "shrinkage": 0.4,
+    "prior_std_before_14_dates": 0.05,
+    "output_units": {
+      "mu_hat_horizon": "expected return over horizon (daily_log_return scale summed)",
+      "mu_hat_daily": "mu_hat_horizon / horizon (daily return scale)",
+      "mu_raw_score": "raw CNN output prior to calibration (unitless score)"
+    },
+    "source_code": "make_ode_inputs.calibrate_mu_expanding"
+  }
+}

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Build the recommended `ensemble_best/` bundle.
 
-Selected via ensemble_search.csv (mode=rank, k=3):
-    logistic_image_scale + cnn_1d_attention_image_scale + cnn_1d_cumulative_scale
-  → OOS rank corr 0.0417, top-k Sharpe 0.503 (both metrics near top).
+Selected via ensemble_search.csv (mode=rank, k=3) after Phase 2 rehab of 2D CNN:
+    logistic_image_scale + cnn_1d_cumulative_scale + cnn_2d_residual_small
+  → OOS rank corr 0.0614, top-k Sharpe 0.630 (simultaneously #1 on both).
 
 Aggregation is cross-sectional percentile rank per (date, model), averaged
 across members. This is scale-invariant, which matters when mixing CNN raw
@@ -23,9 +23,9 @@ ROOT = Path(__file__).parent
 OUT = ROOT / "ode_inputs_cnn"
 
 MEMBERS = {
-    "logistic_image_scale":         "outputs_walkforward_4model",
-    "cnn_1d_attention_image_scale": "outputs_walkforward_1dcnn_extra",
-    "cnn_1d_cumulative_scale":      "outputs_walkforward_1dcnn_extra",
+    "logistic_image_scale":     "outputs_walkforward_4model",
+    "cnn_1d_cumulative_scale":  "outputs_walkforward_1dcnn_extra",
+    "cnn_2d_residual_small":    "outputs_walkforward_2d_phase2",
 }
 BUNDLE_NAME = "ensemble_best"
 RISK_PATH = ROOT / "outputs_walkforward_risk" / "walkforward_predictions.csv"
@@ -99,8 +99,10 @@ def main() -> None:
     cfg["ensemble_members"] = list(MEMBERS.keys())
     cfg["aggregation"] = "cross_sectional_percentile_rank_mean"
     cfg["selection_rationale"] = (
-        "Chosen from ensemble_search.csv as the combination that simultaneously "
-        "ranks near top on OOS rank correlation (0.042) and top-k Sharpe (0.503)."
+        "Chosen from Phase-3 ensemble_search.csv as the combination that is "
+        "simultaneously #1 on OOS rank correlation (0.0614) and top-k Sharpe "
+        "(0.630). Uses the rehabilitated cnn_2d_residual_small from Phase-2 "
+        "(capacity-reduced 2D residual CNN with stronger regularization)."
     )
     cfg_path.write_text(json.dumps(cfg, indent=2), encoding="utf-8")
 

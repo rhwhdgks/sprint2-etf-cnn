@@ -1,0 +1,91 @@
+{
+  "config": {
+    "data_path": "etfdata.csv",
+    "output_dir": "outputs_walkforward_2d_phase2",
+    "lookback": 60,
+    "horizon": 20,
+    "label_mode": "regression",
+    "target_name": "future_return",
+    "selected_assets": [],
+    "enabled_models": [
+      "cnn_2d_residual_small",
+      "cnn_2d_residual_wd"
+    ],
+    "include_moving_average": true,
+    "include_volume": true,
+    "ma_window": null,
+    "image_height": 64,
+    "train_frac": 0.7,
+    "val_frac": 0.15,
+    "top_k": 2,
+    "seed": 42,
+    "logistic_max_iter": 2000,
+    "cnn_epochs": 30,
+    "cnn_repeats": 1,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0005,
+    "patience": 5,
+    "device": "cpu",
+    "sample_preview_count": 0,
+    "wf_min_train_days": 500,
+    "wf_val_days": 60,
+    "wf_test_days": 60
+  },
+  "prep_summary": {
+    "lookback": 60,
+    "horizon": 20,
+    "label_mode": "regression",
+    "target_name": "future_return",
+    "canonical_target_name": "future_return",
+    "signal_role": "expected_return",
+    "target_description": "Predicted future return over the forecast horizon.",
+    "include_moving_average": true,
+    "include_volume": true,
+    "ma_window": 60,
+    "n_samples": 24101,
+    "sequence_shape": [
+      60,
+      6
+    ],
+    "chart_image_shape": [
+      64,
+      180
+    ],
+    "positive_rate": NaN,
+    "target_mean": 0.0030535372463477554,
+    "target_std": 0.04332760439699087,
+    "target_min": -0.45925363023782906,
+    "target_max": 0.3017948835324018
+  },
+  "comparison": [
+    {
+      "rmse": 0.04566928086906833,
+      "mae": 0.02981491365521267,
+      "target_rank_correlation": 0.005704183204802189,
+      "future_return_rank_correlation": 0.005704183204802189,
+      "top_k_cumulative_return": 0.3631335449297577,
+      "top_k_sharpe": 0.2486287499616241,
+      "top_k_hit_rate": 0.5833333333333334,
+      "top_bottom_spread_mean": 0.0003431069436943268,
+      "turnover": 0.6188811188811189,
+      "n_rebalances": 144.0,
+      "model_name": "cnn_2d_residual_wd",
+      "n_folds": 48
+    },
+    {
+      "rmse": 0.04624431045687202,
+      "mae": 0.03038786732311345,
+      "target_rank_correlation": 0.04261262688625306,
+      "future_return_rank_correlation": 0.04261262688625306,
+      "top_k_cumulative_return": 0.25282484636839975,
+      "top_k_sharpe": 0.2080024824321495,
+      "top_k_hit_rate": 0.5902777777777778,
+      "top_bottom_spread_mean": 0.0027035289388703913,
+      "turnover": 0.6083916083916084,
+      "n_rebalances": 144.0,
+      "model_name": "cnn_2d_residual_small",
+      "n_folds": 48
+    }
+  ]
+}

@@ -50,6 +50,8 @@ def _build_feature_sets(bundle: SampleBundle, n: int, enabled_models: list[str] 
         "cnn_1d_attention_image_scale": np.transpose(bundle.image_sequences, (0, 2, 1)),
         "cnn_2d_rendered_images": (bundle.chart_images[:, None, :, :].astype(np.float32) / 255.0),
         "cnn_2d_residual_images": (bundle.chart_images[:, None, :, :].astype(np.float32) / 255.0),
+        "cnn_2d_residual_small": (bundle.chart_images[:, None, :, :].astype(np.float32) / 255.0),
+        "cnn_2d_residual_wd": (bundle.chart_images[:, None, :, :].astype(np.float32) / 255.0),
     }
     if enabled_models:
         return {k: v for k, v in all_sets.items() if k in set(enabled_models)}

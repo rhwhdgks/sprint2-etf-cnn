@@ -141,26 +141,28 @@ class ImageResidualBlock(nn.Module):
 
 
 class ImageResidualCnn(nn.Module):
-    def __init__(self):
+    def __init__(self, base_channels: int = 16, dropout: float = 0.1):
         super().__init__()
+        c1 = base_channels
+        c2 = base_channels * 2
         self.stem = nn.Sequential(
-            nn.Conv2d(1, 16, kernel_size=3, padding=1),
+            nn.Conv2d(1, c1, kernel_size=3, padding=1),
             nn.ReLU(),
             nn.MaxPool2d(2),
         )
-        self.block1 = ImageResidualBlock(16)
+        self.block1 = ImageResidualBlock(c1)
         self.transition = nn.Sequential(
-            nn.Conv2d(16, 32, kernel_size=3, padding=1),
+            nn.Conv2d(c1, c2, kernel_size=3, padding=1),
             nn.ReLU(),
             nn.MaxPool2d(2),
         )
-        self.block2 = ImageResidualBlock(32)
+        self.block2 = ImageResidualBlock(c2)
         self.head = nn.Sequential(
             nn.AdaptiveAvgPool2d((4, 4)),
             nn.Flatten(),
-            nn.Linear(32 * 4 * 4, 64),
+            nn.Linear(c2 * 4 * 4, 64),
             nn.ReLU(),
-            nn.Dropout(0.1),
+            nn.Dropout(dropout),
             nn.Linear(64, 1),
         )
 
@@ -226,6 +228,10 @@ def build_cnn_model(model_name: str, input_shape: tuple[int, ...]) -> nn.Module:
     if model_name == "cnn_2d_rendered_images":
         return ImageCnn()
     if model_name == "cnn_2d_residual_images":
+        return ImageResidualCnn()
+    if model_name == "cnn_2d_residual_small":
+        return ImageResidualCnn(base_channels=8, dropout=0.2)
+    if model_name == "cnn_2d_residual_wd":
         return ImageResidualCnn()
     raise ValueError(f"unsupported CNN model name: {model_name}")
 

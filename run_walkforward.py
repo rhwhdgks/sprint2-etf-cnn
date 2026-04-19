@@ -45,6 +45,8 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--wf-test-days", type=int, default=60)
     p.add_argument("--cnn-epochs", type=int, default=8)
     p.add_argument("--cnn-repeats", type=int, default=1)
+    p.add_argument("--patience", type=int, default=2, help="early-stopping patience (epochs without val improvement)")
+    p.add_argument("--weight-decay", type=float, default=1e-4)
     p.add_argument("--top-k", type=int, default=2)
     p.add_argument("--seed", type=int, default=42)
     return p
@@ -67,6 +69,8 @@ def main() -> None:
         wf_test_days=args.wf_test_days,
         cnn_epochs=args.cnn_epochs,
         cnn_repeats=args.cnn_repeats,
+        patience=args.patience,
+        weight_decay=args.weight_decay,
         top_k=args.top_k,
         seed=args.seed,
         sample_preview_count=0,

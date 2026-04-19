@@ -49,6 +49,7 @@ CNN_MODELS = {
     "cnn_1d_attention_image_scale",
     "cnn_2d_rendered_images",
     "cnn_2d_residual_images",
+    "cnn_2d_residual_small",
 }
 
 

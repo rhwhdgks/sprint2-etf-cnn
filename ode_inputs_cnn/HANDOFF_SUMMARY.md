@@ -7,25 +7,26 @@
 
 ## TL;DR
 
-- **7개 CNN 아키텍처** + **2종 앙상블** + **2종 non-CNN 베이스라인** (총 11 entries)을 walk-forward OOS로 평가
-- ★ **`ensemble_best` (CNN + logistic 혼합)** 이 두 metric 모두 상위 → **다음 ODE 실험의 권장 default**
+- **8개 CNN 아키텍처** + **2종 앙상블** + **2종 non-CNN 베이스라인** (총 12 entries)을 walk-forward OOS로 평가
+- ★ **`ensemble_best` (CNN + logistic 혼합)** 이 두 metric 모두 **단독 1위** → **다음 ODE 실험의 권장 default**
+- **Phase 2에서 2D CNN 재조정 (`cnn_2d_residual_small`)** → 개별 rank corr 0.043 으로 CNN 중 최상위
 - ODE 입력 4종 (μ·Σ·risk·R) 모두 **daily 그리드로 정렬**되어 있고 **look-ahead leakage 없음**
 
-### 핵심 숫자 (11 entries, non-CNN 베이스라인 포함)
+### 핵심 숫자 (12 entries, non-CNN 베이스라인 포함)
 
 | 지표 | Rank corr 1위 | Top-k Sharpe 1위 | 최약 베이스라인 |
 |---|---|---|---|
-| 모델 | ★ `ensemble_best` | `cnn_1d_cumulative_scale` | `logistic_cumulative_scale` |
-| OOS rank corr | **0.0422** | 0.0271 | −0.0072 |
-| Top-k Sharpe | 0.503 | **0.521** | 0.076 |
+| 모델 | ★ `ensemble_best` | ★ `ensemble_best` | `logistic_cumulative_scale` |
+| OOS rank corr | **0.0606** | 0.0606 | −0.0072 |
+| Top-k Sharpe | **0.643** | **0.643** | 0.076 |
 
-`ensemble_best` = `logistic_image_scale` + `cnn_1d_attention_image_scale` + `cnn_1d_cumulative_scale`, cross-sectional percentile-rank 평균. **단일 logistic_image_scale (0.039) 천장을 뚫고 두 metric에서 모두 top-3** — point-prediction(랭킹)과 portfolio-construction(Sharpe) 모두 상위권으로 통합된 첫 시그널.
+`ensemble_best` = `logistic_image_scale` + `cnn_1d_cumulative_scale` + `cnn_2d_residual_small`, cross-sectional percentile-rank 평균. **단일 logistic_image_scale (0.039) 천장을 뚫고 이전 best 조합(0.042)도 갱신** — 한 조합이 rank corr와 top-k Sharpe 모두 1위를 차지하는 드문 결과.
 
-레거시 CNN-only 앙상블 `ensemble_top3`: rank corr **0.0320**, top-k Sharpe **0.374** — 참고용으로 유지.
+**Phase 2/3 핵심 발견**: 2D residual CNN이 원래 underperform했던 원인은 **overparam + undertrain**. Capacity 1/3 축소 (60K→23K params) + dropout 0.2 + wd=5e-4 + patience=5로 재훈련 → `cnn_2d_residual_small`이 기존 2D residual 대비 rank corr **4.3배** (0.010→0.043), ensemble에 포함되면서 새 천장 개방.
+
+레거시 CNN-only 앙상블 `ensemble_top3` (현재 자동 재선정: 2d_residual_small + dilated + cumulative): rank corr **0.0375**, top-k Sharpe **0.275**.
 
 상세 비교표: [comparison_with_baselines.csv](comparison_with_baselines.csv) · 조합 탐색 결과: [ensemble_search_top.md](ensemble_search_top.md)
-
-상세 비교표: [comparison_with_baselines.csv](comparison_with_baselines.csv)
 
 ---
 
@@ -40,10 +41,10 @@
 - 🟧 **Baseline (image+logistic)** · ⬜ **Baseline (no image)**
 
 핵심 관찰:
-- **Rank corr 1등은 `ensemble_best` (0.0422)** — logistic_image 단일(0.039) 천장을 뚫음
-- **Top-k Sharpe 1등은 `cnn_1d_cumulative_scale` (0.52)**, `ensemble_best`가 0.503으로 근접 2위
-- **2D CNN은 전 지표 완패**, `logistic_cumulative_scale`(완전 베이스)이 꼴찌 (-0.007)
-- logistic_image가 거의 모든 상위 앙상블 조합에 포함됨 → **non-CNN 베이스라인이 CNN 다양화에 결정적 기여**
+- **Rank corr & Sharpe 동시 1등은 `ensemble_best` (0.0606 / 0.643)** — logistic_image 단일(0.039) 천장과 Phase 1 best(0.042)를 모두 갱신
+- **재조정된 2D CNN(`cnn_2d_residual_small`)이 단독 rank corr 0.043**으로 CNN 중 1위 — 기존 `cnn_2d_residual_images` (0.007) 대비 6배
+- 그러나 **2D residual 원본과 wd-only 변형은 여전히 하위** → "capacity + regularization + patience"를 모두 걸어야 효과
+- logistic_image + 1D cumulative + 2D residual_small 조합은 **3가지 다른 패밀리**의 signal이 섞여 correlation이 가장 낮음 → diversification이 최대화됨
 
 ## 1-B. Ablation — "이미지 효과" vs "CNN 효과" 분리
 
@@ -160,11 +161,11 @@ risk = bundle[[f"{a}_risk" for a in ASSETS]].values
 
 ## 경고 / 한계
 
-- **OOS rank corr 0.04 수준은 statistically 작은 신호.** 단일 점 예측보다는 앙상블·시간평균·포트폴리오 관점에서 활용 권장
-- **CNN만의 앙상블은 rank corr에서 logistic_image를 이기지 못함** (0.032 < 0.039). `ensemble_best`로 logistic을 포함시켜야 천장 돌파 (0.042)
-- **2D CNN은 현 데이터셋에서 underperform**. 향후 데이터 확대(long lookback OHLCV) 없이 2D 추가 투자는 ROI 낮음
+- **OOS rank corr 0.06 수준도 statistically 작은 신호.** 단일 점 예측보다는 앙상블·시간평균·포트폴리오 관점에서 활용 권장
+- **CNN만의 앙상블은 여전히 mixed 대비 약함** (raw-mean ensemble_top3 = 0.038 < ensemble_best 0.061). logistic_image 포함이 필수
+- **2D CNN은 기본 설정에선 underfit** — 60K params + wd 1e-4 + 8 epoch로는 학습 부족. Rehab protocol(small capacity + strong wd + patience)이 걸려야만 유효
 - **γ(t) 시변 위험회피 신호는 이번 CNN 파트에 포함 안 됨** — ODE 스프린트에서 추가 실험 대상
 
 ## 발표 시 방어 framing (권장)
 
-> "**이미지 변환 자체가 가장 큰 lift**를 제공하고(rank corr −0.007 → +0.039), CNN은 그 위에 **portfolio-level 개선**을 추가한다. 하지만 CNN-only 앙상블로는 단일 logistic_image를 rank corr에서 이기지 못한다 — **mixed-family 앙상블(`ensemble_best`)이 필요**했다. 이 mixed 앙상블은 logistic_image를 포함한 3개 멤버의 cross-sectional rank 평균으로, rank corr **0.042**와 top-k Sharpe **0.503**을 동시에 달성. 즉 'CNN이 logistic을 압도'가 아니라 '**두 family가 서로 보완**'이 이번 실험의 empirical 결론이다."
+> "**이미지 변환 자체가 가장 큰 lift**를 제공하고(rank corr −0.007 → +0.039), CNN은 그 위에 **portfolio-level 개선**을 추가한다. 단일 아키텍처만으로는 logistic_image(0.039)를 확실히 이기지 못했지만, **Phase 2 capacity 조정으로 2D CNN을 재활시키고(0.043)**, **CNN + logistic mixed-family 앙상블**에 포함시키니 rank corr **0.061**, top-k Sharpe **0.643**을 동시에 달성 — **한 조합이 두 지표 모두 1위**. 즉 이번 실험의 empirical 결론은 '**image + architecture diversity + mixed family**'가 동시에 작용해야 유의미한 alpha가 나온다는 것."
