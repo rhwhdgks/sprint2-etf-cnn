@@ -1,6 +1,8 @@
 # 주가 차트를 이미지로 바꿔서 CNN에 넣어봤다 — 그리고 왜 다음엔 LSTM이 필요한가
 
-> 7개 ETF 자산으로 포트폴리오를 짤 때 "어떤 자산이 더 오를까"를 예측하는 문제에 CNN 7종을 붙여서 실험했다. 이 글은 그 결과를 공유하고, **왜 다음 단계로 LSTM을 얹는 게 자연스러운가**를 정리한 것.
+> 7개 ETF 자산으로 포트폴리오를 짤 때 "어떤 자산이 더 오를까"를 예측하는 문제에 CNN 7종을 붙였고, 실험 도중 **베이스라인에 졌고 → logistic 섞어서 이겼고 → 그래도 찝찝해서 2D CNN 재조정하니 천장이 한 번 더 뚫렸다**. 이 글은 그 궤적과, **왜 다음 단계로 LSTM을 얹는 게 자연스러운가**를 정리한 것.
+>
+> **최종 결과**: logistic + 1D CNN + 2D CNN (재조정판) 3-family mixed ensemble로 rank corr **0.061**, top-k Sharpe **0.643**을 동시 1위 달성. 이 번들이 다음 ODE 스프린트의 default 입력.
 
 ---
 
@@ -67,7 +69,7 @@ CNN은 원래 고양이·강아지 사진 구분용으로 유명한 모델이다
 - 왼쪽: **Spearman rank correlation** — 예측 랭킹과 실제 수익 랭킹이 얼마나 비슷한지 (높을수록 좋음, 완전 랜덤이면 0)
 - 오른쪽: **Top-k 포트폴리오 Sharpe ratio** — 예측 상위 2개 자산에 투자한 전략의 실전 성과
 
-가장 눈에 띈 건 **`cnn_1d_cumulative_scale`이 Sharpe 0.52로 압도**. 그리고 2D CNN 두 개는 **거의 바닥**.
+가장 눈에 띈 건 **`cnn_1d_cumulative_scale`이 Sharpe 0.52로 압도**. 그리고 2D CNN 두 개는 **거의 바닥**. (후에 이 2D CNN 바닥이 **모델 잘못이 아니라 학습 프로토콜 잘못**이었다는 게 밝혀지는데, 그건 §6-C에서.)
 
 ---
 
@@ -147,10 +149,13 @@ CNN 1D 계열끼리 **0.5~0.6 상관**. 비슷한 정보를 다른 방식으로 
 
 ## 6-C. 다시 들어가본 2D CNN — overfit이 아니라 "덜 배워서 underperform"이었다
 
-여기서 멈추기엔 찝찝한 구석이 있었다: **2D CNN이 개별 성능 0.007로 처참했던 이유**. 처음엔 "데이터 부족으로 overfit"이 가장 그럴듯해 보였다. 단일 fold로 학습곡선을 찍어 보니 의외:
+여기서 멈추기엔 찝찝한 구석이 있었다: **2D CNN이 개별 성능 0.007로 처참했던 이유**. 처음엔 "데이터 부족으로 overfit"이 가장 그럴듯해 보였다. 확인하려고 단일 fold로 학습곡선을 찍어봤다:
+
+![2D CNN loss curves](ode_inputs_cnn/figures/10_2d_cnn_loss_curves.png)
 
 - 2D residual: **epoch 18에서 최적 val loss**. 우리 기본 설정은 **8 epoch + patience 2** — train이 끝나기도 전에 조기 종료
 - 1D dilated: epoch 5에서 최적 → 1D는 8 epoch로 충분
+- val loss가 꾸준히 내려가는 모양 → overfit이 아니라 **그냥 덜 배운 상태**
 
 즉 문제는 overfit이 아니라 **undertrain + overparam**이었다. Phase 2로 2D만 재훈련 (30 epoch + patience 5):
 
